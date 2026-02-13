@@ -1,13 +1,1383 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Fauzi Hidayat - Inventory Control Specialist</title>
-    <script type="module" crossorigin src="./assets/index-KDQTpyHE.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-Dyw070T7.css">
-  </head>
-  <body>
-    <div id="root"></div>
-  </body>
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fauzi Hidayat | Inventory Control & Warehouse Specialist</title>
+    <meta name="description" content="Inventory Control Specialist dengan 7+ tahun pengalaman mengelola 37 cabang dengan akurasi 98%. Expert di Total Station, AutoCAD, Excel Automation, dan Warehouse Management.">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --secondary: #64748b;
+            --accent: #f59e0b;
+            --bg: #0f172a;
+            --surface: #1e293b;
+            --text: #f8fafc;
+            --text-muted: #94a3b8;
+            --success: #10b981;
+            --danger: #ef4444;
+            --whatsapp: #25d366;
+            --whatsapp-dark: #128c7e;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-weight: 700;
+            font-size: 1.25rem;
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .mobile-menu {
+            display: none;
+            flex-direction: column;
+            gap: 4px;
+            cursor: pointer;
+        }
+
+        .mobile-menu span {
+            width: 25px;
+            height: 3px;
+            background: var(--text);
+            transition: 0.3s;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 6rem 2rem 4rem;
+            background: linear-gradient(135deg, var(--bg) 0%, var(--surface) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, var(--primary) 0%, transparent 70%);
+            opacity: 0.1;
+            pointer-events: none;
+        }
+
+        .hero-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .hero-content .highlight {
+            color: var(--primary);
+            position: relative;
+            display: inline-block;
+        }
+
+        .hero-content .highlight::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 8px;
+            background: var(--accent);
+            opacity: 0.3;
+            z-index: -1;
+        }
+
+        .hero-subtitle {
+            font-size: 1.25rem;
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+        }
+
+        .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .stat-card {
+            background: var(--surface);
+            padding: 1.5rem;
+            border-radius: 12px;
+            border: 1px solid rgba(255,255,255,0.1);
+            text-align: center;
+            transition: transform 0.3s, border-color 0.3s;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary);
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary);
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 0.875rem;
+            color: var(--text-muted);
+            margin-top: 0.5rem;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 0.875rem 1.5rem;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+            border: 2px solid var(--primary);
+        }
+
+        .btn-primary:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(37, 99, 235, 0.3);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--text);
+            border: 2px solid var(--secondary);
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+        }
+
+        .btn-whatsapp {
+            background: var(--whatsapp);
+            color: white;
+            border: 2px solid var(--whatsapp);
+        }
+
+        .btn-whatsapp:hover {
+            background: var(--whatsapp-dark);
+            border-color: var(--whatsapp-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(37, 211, 102, 0.3);
+        }
+
+        /* WhatsApp Floating Button */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: var(--whatsapp);
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            text-decoration: none;
+            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+            z-index: 999;
+            transition: all 0.3s;
+            animation: pulse 2s infinite;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1) rotate(10deg);
+            box-shadow: 0 6px 30px rgba(37, 211, 102, 0.6);
+        }
+
+        .whatsapp-float::before {
+            content: '💬';
+        }
+
+        .whatsapp-tooltip {
+            position: fixed;
+            bottom: 100px;
+            right: 30px;
+            background: white;
+            color: #333;
+            padding: 8px 16px;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            opacity: 0;
+            transition: opacity 0.3s;
+            pointer-events: none;
+            z-index: 998;
+        }
+
+        .whatsapp-float:hover + .whatsapp-tooltip {
+            opacity: 1;
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+            70% { box-shadow: 0 0 0 20px rgba(37, 211, 102, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+        }
+
+        /* Sections */
+        section {
+            padding: 5rem 2rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--text);
+        }
+
+        .section-header p {
+            color: var(--text-muted);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Projects Grid */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .project-card {
+            background: var(--surface);
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid rgba(255,255,255,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+        }
+
+        .project-header {
+            padding: 2rem;
+            background: linear-gradient(135deg, rgba(37, 99, 235, 0.1) 0%, transparent 100%);
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .project-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--primary);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .project-header h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .project-tags {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            background: rgba(37, 99, 235, 0.2);
+            color: var(--primary);
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        .project-content {
+            padding: 2rem;
+        }
+
+        .project-description {
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .project-metrics {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .metric {
+            text-align: center;
+            padding: 1rem;
+            background: rgba(255,255,255,0.05);
+            border-radius: 8px;
+        }
+
+        .metric-value {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--accent);
+        }
+
+        .metric-label {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+        }
+
+        .project-details {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-out;
+        }
+
+        .project-details.active {
+            max-height: 2000px;
+        }
+
+        .detail-section {
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .detail-section h4 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .code-block {
+            background: #0d1117;
+            border: 1px solid #30363d;
+            border-radius: 8px;
+            padding: 1rem;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.8rem;
+            overflow-x: auto;
+            margin: 1rem 0;
+            color: #c9d1d9;
+        }
+
+        .code-comment { color: #8b949e; }
+        .code-keyword { color: #ff7b72; }
+        .code-function { color: #d2a8ff; }
+        .code-string { color: #a5d6ff; }
+        .code-number { color: #79c0ff; }
+
+        .expand-btn {
+            width: 100%;
+            padding: 0.75rem;
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            color: var(--text-muted);
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.3s;
+        }
+
+        .expand-btn:hover {
+            background: rgba(37, 99, 235, 0.2);
+            color: var(--primary);
+            border-color: var(--primary);
+        }
+
+        /* Skills Section */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .skill-category {
+            background: var(--surface);
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .skill-category h3 {
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .skill-list {
+            list-style: none;
+        }
+
+        .skill-list li {
+            padding: 0.5rem 0;
+            color: var(--text-muted);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .skill-list li::before {
+            content: '▹';
+            color: var(--accent);
+        }
+
+        /* About Section */
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 4rem;
+            align-items: start;
+        }
+
+        .about-image {
+            position: relative;
+        }
+
+        .image-placeholder {
+            width: 100%;
+            aspect-ratio: 1;
+            background: var(--surface);
+            border-radius: 16px;
+            border: 2px dashed var(--secondary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-muted);
+            font-size: 3rem;
+        }
+
+        .experience-timeline {
+            position: relative;
+            padding-left: 2rem;
+        }
+
+        .experience-timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 2px;
+            background: var(--primary);
+            opacity: 0.3;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 2rem;
+            padding-left: 2rem;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -2rem;
+            top: 0.5rem;
+            width: 12px;
+            height: 12px;
+            background: var(--primary);
+            border-radius: 50%;
+            transform: translateX(-5px);
+        }
+
+        .timeline-date {
+            color: var(--accent);
+            font-weight: 600;
+            font-size: 0.875rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-title {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-desc {
+            color: var(--text-muted);
+        }
+
+        /* Contact Section */
+        .contact {
+            background: var(--surface);
+            text-align: center;
+        }
+
+        .contact-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .contact-card {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 12px;
+            padding: 1.5rem;
+            text-decoration: none;
+            color: var(--text);
+            transition: all 0.3s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .contact-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary);
+            background: rgba(255,255,255,0.1);
+        }
+
+        .contact-icon {
+            font-size: 2rem;
+        }
+
+        .contact-label {
+            font-weight: 600;
+            color: var(--text);
+        }
+
+        .contact-value {
+            font-size: 0.875rem;
+            color: var(--text-muted);
+            word-break: break-all;
+        }
+
+        .contact-card.whatsapp {
+            border-color: var(--whatsapp);
+            background: rgba(37, 211, 102, 0.1);
+        }
+
+        .contact-card.whatsapp:hover {
+            background: rgba(37, 211, 102, 0.2);
+            box-shadow: 0 10px 20px rgba(37, 211, 102, 0.2);
+        }
+
+        .highlight-box {
+            margin-top: 3rem;
+            padding: 2rem;
+            background: linear-gradient(135deg, rgba(37, 99, 235, 0.1) 0%, rgba(37, 211, 102, 0.1) 100%);
+            border-radius: 16px;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .highlight-box h3 {
+            margin-bottom: 1rem;
+            color: var(--text);
+        }
+
+        .availability-status {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(16, 185, 129, 0.2);
+            color: var(--success);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .availability-status::before {
+            content: '';
+            width: 8px;
+            height: 8px;
+            background: var(--success);
+            border-radius: 50%;
+            animation: blink 2s infinite;
+        }
+
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background: var(--bg);
+            color: var(--text-muted);
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-container {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+
+            .hero-stats {
+                grid-template-columns: 1fr;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-menu {
+                display: flex;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .whatsapp-float {
+                width: 50px;
+                height: 50px;
+                font-size: 24px;
+                bottom: 20px;
+                right: 20px;
+            }
+        }
+
+        /* Smooth Scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Animation */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .fade-in {
+            animation: fadeIn 0.6s ease-out;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="#" class="logo">Fauzi Hidayat</a>
+            <ul class="nav-links">
+                <li><a href="#about">Tentang</a></li>
+                <li><a href="#projects">Proyek</a></li>
+                <li><a href="#skills">Keahlian</a></li>
+                <li><a href="#contact">Kontak</a></li>
+            </ul>
+            <div class="mobile-menu" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/6281358633340" target="_blank" class="whatsapp-float" title="Chat WhatsApp"></a>
+    <div class="whatsapp-tooltip">💬 Chat dengan Fauzi</div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1>Inventory Control <span class="highlight">& Warehouse Specialist</span></h1>
+                <p class="hero-subtitle">7+ tahun mengoptimalkan sistem inventory multi-cabang dengan integrasi teknologi survey, otomasi Excel, dan analisis data presisi.</p>
+                
+                <div class="hero-stats">
+                    <div class="stat-card">
+                        <span class="stat-number">98%</span>
+                        <div class="stat-label">Akurasi Stock Opname</div>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number">37</span>
+                        <div class="stat-label">Cabang Terkelola</div>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number">90%</span>
+                        <div class="stat-label">Efisiensi Waktu</div>
+                    </div>
+                </div>
+
+                <div class="cta-buttons">
+                    <a href="#projects" class="btn btn-primary">Lihat Proyek Teknis</a>
+                    <a href="https://wa.me/6281358633340" target="_blank" class="btn btn-whatsapp">💬 Hubungi via WhatsApp</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div style="background: var(--surface); padding: 2rem; border-radius: 16px; border: 1px solid rgba(255,255,255,0.1);">
+                    <div style="font-family: 'JetBrains Mono', monospace; font-size: 0.8rem; color: var(--text-muted); margin-bottom: 1rem;">// System Status: Online</div>
+                    <div style="display: grid; gap: 0.5rem;">
+                        <div style="display: flex; justify-content: space-between; padding: 0.5rem; background: rgba(37, 99, 235, 0.1); border-radius: 4px;">
+                            <span>Total Station</span>
+                            <span style="color: var(--success);">● Connected</span>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; padding: 0.5rem; background: rgba(37, 99, 235, 0.1); border-radius: 4px;">
+                            <span>AutoCAD</span>
+                            <span style="color: var(--success);">● Active</span>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; padding: 0.5rem; background: rgba(37, 99, 235, 0.1); border-radius: 4px;">
+                            <span>Excel Automation</span>
+                            <span style="color: var(--success);">● Running</span>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; padding: 0.5rem; background: rgba(37, 99, 235, 0.1); border-radius: 4px;">
+                            <span>Database Sync</span>
+                            <span style="color: var(--success);">● 37 Nodes</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2>Tentang Saya</h2>
+                <p>Spesialis Inventory Control dengan pendekatan teknikal dan data-driven</p>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-image">
+                    <div class="image-placeholder">👤</div>
+                    <div style="margin-top: 1rem; text-align: center;">
+                        <a href="https://wa.me/6281358633340" target="_blank" class="btn btn-whatsapp" style="width: 100%; justify-content: center;">💬 Chat WhatsApp</a>
+                    </div>
+                </div>
+                
+                <div class="experience-timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-date">2023 - Sekarang</div>
+                        <div class="timeline-title">Staff Logistik – Inventory Control (Head Office)</div>
+                        <div class="timeline-desc">
+                            Memimpin stock opname 37 cabang dengan akurasi 98%. Mengembangkan sistem perhitungan otomatis untuk tangki solar (elips) dan silo semen. Bertanggung jawab atas approval transfer barang antar gudang dengan nilai aset miliaran rupiah.
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-date">2017 - 2023</div>
+                        <div class="timeline-title">Production Operator</div>
+                        <div class="timeline-desc">
+                            Memastikan kualitas produksi dan koordinasi material dengan tim gudang. Membangun fondasi pemahaman operasional manufacturing yang kuat.
+                        </div>
+                    </div>
+
+                    <div style="margin-top: 2rem; padding: 1.5rem; background: rgba(245, 158, 11, 0.1); border-left: 4px solid var(--accent); border-radius: 0 8px 8px 0;">
+                        <strong style="color: var(--accent);">Sertifikasi & Keahlian Teknis:</strong><br>
+                        • Total Station Operation & AutoCAD 3D Modeling<br>
+                        • Advanced Excel (VBA, Complex Formulas, Pivot)<br>
+                        • Sunfish ERP & Database Management<br>
+                        • Stockpile Volume Calculation (Average End Area Method)
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-header">
+                <h2>Proyek Teknis Unggulan</h2>
+                <p>Sistem yang saya kembangkan untuk optimalisasi inventory control</p>
+            </div>
+
+            <div class="projects-grid">
+                <!-- Project 1: Tank Calculator -->
+                <div class="project-card" onclick="toggleDetails(1)">
+                    <div class="project-header">
+                        <div class="project-icon">⛽</div>
+                        <h3>Smart Tank Volume Calculator</h3>
+                        <div class="project-tags">
+                            <span class="tag">Excel</span>
+                            <span class="tag">Geometry</span>
+                            <span class="tag">Automation</span>
+                        </div>
+                    </div>
+                    
+                    <div class="project-content">
+                        <p class="project-description">
+                            Sistem perhitungan otomatis volume tangki horizontal berbentuk elips untuk solar dan tangki vertikal untuk semen. Menggunakan formula geometri non-linear dengan tabel lookup konversi kedalaman ke volume.
+                        </p>
+                        
+                        <div class="project-metrics">
+                            <div class="metric">
+                                <div class="metric-value">90%</div>
+                                <div class="metric-label">Lebih Cepat</div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-value">±1.5%</div>
+                                <div class="metric-label">Akurasi</div>
+                            </div>
+                        </div>
+
+                        <div id="details-1" class="project-details">
+                            <div class="detail-section">
+                                <h4>Problem</h4>
+                                <p style="color: var(--text-muted); font-size: 0.9rem;">
+                                    Perhitungan manual volume tangki elips memakan waktu 45 menit dengan error rate 15%. Hubungan antara kedalaman cairan dan volume tidak linear, memerlukan interpolasi kompleks.
+                                </p>
+                            </div>
+
+                            <div class="detail-section">
+                                <h4>Solution & Formula</h4>
+                                <div class="code-block">
+<span class="code-comment">' Horizontal Elliptical Tank Calculation</span>
+<span class="code-keyword">Function</span> <span class="code-function">CalculateVolume</span>(Length, Height, Width, Depth)
+    r1 = Height / 2
+    r2 = Width / 2
+    <span class="code-comment">' Area of ellipse segment based on depth</span>
+    Area = <span class="code-function">EllipseSegmentArea</span>(r1, r2, Depth)
+    Volume = Area * Length
+    <span class="code-keyword">Return</span> Volume * <span class="code-number">0.001</span> <span class="code-comment">' Convert to liters</span>
+<span class="code-keyword">End Function</span>
+
+<span class="code-comment">' Lookup Table for Non-linear Conversion</span>
+Depth(%)    Volume(%)
+<span class="code-number">5%</span>         →   <span class="code-number">1.36%</span>
+<span class="code-number">10%</span>        →   <span class="code-number">3.82%</span>
+<span class="code-number">50%</span>        →   <span class="code-number">39.68%</span>
+<span class="code-number">80%</span>        →   <span class="code-number">75.21%</span>
+                                </div>
+                            </div>
+
+                            <div class="detail-section">
+                                <h4>Impact</h4>
+                                <ul style="color: var(--text-muted); font-size: 0.9rem; padding-left: 1.2rem;">
+                                    <li>Waktu perhitungan: 45 menit → 5 menit</li>
+                                    <li>Standarisasi template untuk 37 cabang</li>
+                                    <li>Prevent stock out dengan alert otomatis</li>
+                                    <li>Validasi data input untuk mencegah human error</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <button class="expand-btn" onclick="event.stopPropagation(); toggleDetails(1)">
+                            Lihat Detail Teknis ↓
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Project 2: 3D Measurement -->
+                <div class="project-card" onclick="toggleDetails(2)">
+                    <div class="project-header">
+                        <div class="project-icon">📐</div>
+                        <h3>3D Stockpile Measurement System</h3>
+                        <div class="project-tags">
+                            <span class="tag">Total Station</span>
+                            <span class="tag">AutoCAD</span>
+                            <span class="tag">Survey</span>
+                        </div>
+                    </div>
+                    
+                    <div class="project-content">
+                        <p class="project-description">
+                            Workflow end-to-end untuk pengukuran volume material curah (pasir, batu pecah) menggunakan Total Station, pemodelan 3D di AutoCAD, dan perhitungan volume dengan metode Average End Area di Excel.
+                        </p>
+                        
+                        <div class="project-metrics">
+                            <div class="metric">
+                                <div class="metric-value">98%</div>
+                                <div class="metric-label">Akurasi</div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-value">4 jam</div>
+                                <div class="metric-label">Per Survey</div>
+                            </div>
+                        </div>
+
+                        <div id="details-2" class="project-details">
+                            <div class="detail-section">
+                                <h4>Workflow Process</h4>
+                                <div style="background: rgba(255,255,255,0.05); padding: 1rem; border-radius: 8px; margin: 1rem 0;">
+                                    <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+                                        <div style="display: flex; align-items: center; gap: 0.5rem;">
+                                            <span style="background: var(--primary); color: white; width: 24px; height: 24px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: bold;">1</span>
+                                            <span>Total Station → Point Cloud Data (XYZ Coordinates)</span>
+                                        </div>
+                                        <div style="margin-left: 12px; width: 2px; height: 20px; background: var(--secondary);"></div>
+                                        <div style="display: flex; align-items: center; gap: 0.5rem;">
+                                            <span style="background: var(--primary); color: white; width: 24px; height: 24px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: bold;">2</span>
+                                            <span>AutoCAD Civil 3D → Create Boundary & Contour Lines</span>
+                                        </div>
+                                        <div style="margin-left: 12px; width: 2px; height: 20px; background: var(--secondary);"></div>
+                                        <div style="display: flex; align-items: center; gap: 0.5rem;">
+                                            <span style="background: var(--primary); color: white; width: 24px; height: 24px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: bold;">3</span>
+                                            <span>Excel Calculation → Average End Area Method</span>
+                                        </div>
+                                        <div style="margin-left: 12px; width: 2px; height: 20px; background: var(--secondary);"></div>
+                                        <div style="display: flex; align-items: center; gap: 0.5rem;">
+                                            <span style="background: var(--primary); color: white; width: 24px; height: 24px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: bold;">4</span>
+                                            <span>Output: Volume (m³) → Convert to Tons (Density Factor)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="detail-section">
+                                <h4>Calculation Method</h4>
+                                <div class="code-block">
+<span class="code-comment">' Average End Area Method untuk Stock Pile</span>
+<span class="code-keyword">Input:</span>
+  Elv_Atas = <span class="code-number">18.402</span>  <span class="code-comment">'m</span>
+  Elv_Bawah = <span class="code-number">17.410</span> <span class="code-comment">'m</span>
+  Luas_Atas = <span class="code-number">0</span>      <span class="code-comment">'m² (tumpukan runcing)</span>
+  Luas_Bawah = <span class="code-number">35.8788</span> <span class="code-comment">'m²</span>
+
+<span class="code-comment">' Formula:</span>
+Beda_Tinggi = Elv_Atas - Elv_Bawah
+Luas_Rata2 = (Luas_Atas + Luas_Bawah) / <span class="code-number">2</span>
+Volume = Luas_Rata2 * Beda_Tinggi  <span class="code-comment">'= 26.38 m³</span>
+
+<span class="code-comment">' Konversi ke Ton:</span>
+Density_Factor = <span class="code-number">1.5</span>  <span class="code-comment">'ton/m³ untuk pasir</span>
+Berat = Volume * Density_Factor  <span class="code-comment">'= 39.57 ton</span>
+                                </div>
+                            </div>
+
+                            <div class="detail-section">
+                                <h4>Material Categories</h4>
+                                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; font-size: 0.85rem; color: var(--text-muted);">
+                                    <div>• Pasir Hitam (1.5 ton/m³)</div>
+                                    <div>• Pasir Silika (1.5 ton/m³)</div>
+                                    <div>• Batu Pecah 05-10 (1.37 ton/m³)</div>
+                                    <div>• Batu Pecah 10-20 (1.37 ton/m³)</div>
+                                    <div>• Batu Pecah 20-30 (1.38 ton/m³)</div>
+                                    <div>• Fly Ash (Density variabel)</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button class="expand-btn" onclick="event.stopPropagation(); toggleDetails(2)">
+                            Lihat Detail Teknis ↓
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Project 3: Reconciliation System -->
+                <div class="project-card" onclick="toggleDetails(3)">
+                    <div class="project-header">
+                        <div class="project-icon">📊</div>
+                        <h3>Multi-Branch Inventory Reconciliation</h3>
+                        <div class="project-tags">
+                            <span class="tag">Data Analysis</span>
+                            <span class="tag">ERP</span>
+                            <span class="tag">SOP</span>
+                        </div>
+                    </div>
+                    
+                    <div class="project-content">
+                        <p class="project-description">
+                            Sistem Berita Acara Stok Opname (BASO) terstandarisasi untuk 37 cabang dengan auto-calculation variance analysis, batasan loss threshold, dan approval workflow digital.
+                        </p>
+                        
+                        <div class="project-metrics">
+                            <div class="metric">
+                                <div class="metric-value">37</div>
+                                <div class="metric-label">Cabang</div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-value">2.5%</div>
+                                <div class="metric-label">Tolerance</div>
+                            </div>
+                        </div>
+
+                        <div id="details-3" class="project-details">
+                            <div class="detail-section">
+                                <h4>System Architecture</h4>
+                                <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1rem;">
+                                    Template Excel terintegrasi dengan formula otomatis untuk menghitung selisih stok fisik vs database, dengan validasi batasan loss yang wajar sesuai kategori material.
+                                </p>
+                            </div>
+
+                            <div class="detail-section">
+                                <h4>Key Formulas</h4>
+                                <div class="code-block">
+<span class="code-comment">' BERITA ACARA STOK OPNAME (BASO) System</span>
+
+<span class="code-keyword">Columns:</span>
+A: Kode_Barang
+B: Nama_Barang  
+C: Satuan
+D: Harga_Satuan
+E: Stok_Fisik
+F: Stok_Database
+G: Issued_Ticket (IT)
+H: Selisih = E - F
+I: Valuasi = H * D
+J: %Variance = H / (E + G) * 100
+
+<span class="code-comment">' Batasan Loss Thresholds:</span>
+Fly_Ash: <span class="code-number">5%</span> dari (Fisik + IT)
+Semen: <span class="code-number">2.5%</span> dari (Fisik + IT)
+Pasir/Batu: <span class="code-number">5%</span> dari (Fisik + IT)
+Solar: <span class="code-number">2.5%</span> dari (Fisik + IT)
+Additive: <span class="code-number">2.5%</span> dari (Fisik + IT)
+
+<span class="code-keyword">Status:</span>
+<span class="code-keyword">IF</span> ABS(%Variance) <= Threshold → <span class="code-string">"OK"</span>
+<span class="code-keyword">IF</span> %Variance > Threshold → <span class="code-string">"Surplus"</span>
+<span class="code-keyword">IF</span> %Variance < -Threshold → <span class="code-string">"Loss"</span>
+                                </div>
+                            </div>
+
+                            <div class="detail-section">
+                                <h4>Dashboard Features</h4>
+                                <div style="background: rgba(255,255,255,0.05); padding: 1rem; border-radius: 8px;">
+                                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; text-align: center;">
+                                        <div>
+                                            <div style="font-size: 1.5rem; color: var(--success);">98.2%</div>
+                                            <div style="font-size: 0.75rem; color: var(--text-muted);">Akurasi Rata-rata</div>
+                                        </div>
+                                        <div>
+                                            <div style="font-size: 1.5rem; color: var(--danger);">3</div>
+                                            <div style="font-size: 0.75rem; color: var(--text-muted);">Item Loss Alert</div>
+                                        </div>
+                                        <div>
+                                            <div style="font-size: 1.5rem; color: var(--accent);">156</div>
+                                            <div style="font-size: 0.75rem; color: var(--text-muted);">SKU Diopname</div>
+                                        </div>
+                                        <div>
+                                            <div style="font-size: 1.5rem; color: var(--primary);">2</div>
+                                            <div style="font-size: 0.75rem; color: var(--text-muted);">Surplus Identified</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button class="expand-btn" onclick="event.stopPropagation(); toggleDetails(3)">
+                            Lihat Detail Teknis ↓
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <div class="section-header">
+                <h2>Keahlian Teknis</h2>
+                <p>Kombinasi keahlian teknis lapangan dan analisis data</p>
+            </div>
+
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>📦 Inventory Management</h3>
+                    <ul class="skill-list">
+                        <li>Stock Opname & Audit</li>
+                        <li>Multi-Branch Coordination</li>
+                        <li>Transfer Approval System</li>
+                        <li>Variance Analysis</li>
+                        <li>Loss Prevention</li>
+                        <li>Cycle Counting</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <h3>💻 Technical Skills</h3>
+                    <ul class="skill-list">
+                        <li>Sunfish ERP</li>
+                        <li>Advanced Excel (VBA/Pivot)</li>
+                        <li>Google Workspace Automation</li>
+                        <li>Database Management</li>
+                        <li>Remote Desktop Support</li>
+                        <li>Digital Workflow Design</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <h3>📐 Survey & Measurement</h3>
+                    <ul class="skill-list">
+                        <li>Total Station Operation</li>
+                        <li>AutoCAD 2D/3D</li>
+                        <li>Volume Calculation</li>
+                        <li>Geometric Modeling</li>
+                        <li>Unit Conversion (m³ → Ton)</li>
+                        <li>Stock Pile Measurement</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <h3>📊 Data Analysis</h3>
+                    <ul class="skill-list">
+                        <li>Excel Formula Development</li>
+                        <li>Tank/Silo Calculation</li>
+                        <li>Stock Reconciliation</li>
+                        <li>Trend Analysis</li>
+                        <li>Reporting Automation</li>
+                        <li>Dashboard Creation</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="contact-content">
+                <h2>Tertarik Berkolaborasi?</h2>
+                <p style="color: var(--text-muted); margin: 1rem 0;">
+                    Saya terbuka untuk kesempatan di bidang Inventory Control, Warehouse Management, atau Logistik. 
+                    Mari diskusikan bagaimana saya bisa membantu optimalisasi sistem inventory Anda.
+                </p>
+                
+                <div class="availability-status">
+                    🟢 Tersedia untuk Kesempatan Baru
+                </div>
+                
+                <div class="contact-grid">
+                    <a href="mailto:fauzi536@gmail.com" class="contact-card">
+                        <div class="contact-icon">📧</div>
+                        <div class="contact-label">Email</div>
+                        <div class="contact-value">fauzi536@gmail.com</div>
+                    </a>
+
+                    <a href="https://wa.me/6281358633340" target="_blank" class="contact-card whatsapp">
+                        <div class="contact-icon">💬</div>
+                        <div class="contact-label">WhatsApp</div>
+                        <div class="contact-value">+62 813-5863-3340</div>
+                    </a>
+
+                    <a href="https://www.linkedin.com/in/fauzi-hidayat-a270a5209/" target="_blank" class="contact-card">
+                        <div class="contact-icon">💼</div>
+                        <div class="contact-label">LinkedIn</div>
+                        <div class="contact-value">Fauzi Hidayat</div>
+                    </a>
+
+                    <a href="#" class="contact-card" onclick="alert('Upload CV PDF ke GitHub dan update link ini')">
+                        <div class="contact-icon">📄</div>
+                        <div class="contact-label">Download CV</div>
+                        <div class="contact-value">PDF Format</div>
+                    </a>
+                </div>
+
+                <div class="highlight-box">
+                    <h3>💡 Siap Membantu Tim Anda</h3>
+                    <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.5rem;">
+                        Dengan pengalaman 7+ tahun mengelola inventory multi-cabang dan mengembangkan sistem otomasi, 
+                        saya siap berkontribusi untuk meningkatkan efisiensi dan akurasi sistem inventory perusahaan Anda.
+                    </p>
+                    <a href="https://wa.me/6281358633340" target="_blank" class="btn btn-whatsapp" style="width: 100%; justify-content: center; padding: 1rem;">
+                        💬 Hubungi Saya via WhatsApp Sekarang
+                    </a>
+                    <p style="margin-top: 1rem; font-size: 0.875rem; color: var(--text-muted);">
+                        ⚡ Respon cepat via WhatsApp
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 Fauzi Hidayat • Inventory Control Specialist</p>
+        <p style="margin-top: 0.5rem; font-size: 0.875rem;">
+            <a href="https://wa.me/6281358633340" target="_blank" style="color: var(--whatsapp); text-decoration: none;">WhatsApp</a> • 
+            <a href="mailto:fauzi536@gmail.com" style="color: var(--primary); text-decoration: none;">Email</a> • 
+            <a href="https://www.linkedin.com/in/fauzi-hidayat-a270a5209/" target="_blank" style="color: var(--primary); text-decoration: none;">LinkedIn</a>
+        </p>
+    </footer>
+
+    <script>
+        // Toggle project details
+        function toggleDetails(id) {
+            const details = document.getElementById(`details-${id}`);
+            const allDetails = document.querySelectorAll('.project-details');
+            
+            // Close others
+            allDetails.forEach((detail, index) => {
+                if (index + 1 !== id) {
+                    detail.classList.remove('active');
+                }
+            });
+            
+            // Toggle current
+            details.classList.toggle('active');
+            
+            // Smooth scroll to card if opening
+            if (details.classList.contains('active')) {
+                setTimeout(() => {
+                    details.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                }, 100);
+            }
+        }
+
+        // Mobile menu toggle
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+            navLinks.style.position = 'absolute';
+            navLinks.style.top = '100%';
+            navLinks.style.left = '0';
+            navLinks.style.right = '0';
+            navLinks.style.background = 'var(--bg)';
+            navLinks.style.flexDirection = 'column';
+            navLinks.style.padding = '1rem';
+            navLinks.style.borderBottom = '1px solid rgba(255,255,255,0.1)';
+        }
+
+        // Smooth scroll for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add fade-in animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.project-card, .skill-category, .timeline-item').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Track WhatsApp clicks (optional, for analytics)
+        document.querySelectorAll('a[href*="wa.me"]').forEach(link => {
+            link.addEventListener('click', () => {
+                console.log('WhatsApp clicked');
+            });
+        });
+    </script>
+</body>
 </html>
