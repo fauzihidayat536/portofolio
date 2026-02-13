@@ -47,7 +47,7 @@
 
 ## 🔗 Link
 
-- 🌐 Portfolio: https://fauzhidayat36.github.io/fauzi-portfolio/
+- 🌐 Portfolio: https://fauzihidayat536.github.io/portofolio/
 - 💼 LinkedIn: https://linkedin.com/in/fauzi-hidayat-a270a5209
 
 ---
