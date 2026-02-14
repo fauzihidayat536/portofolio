@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fauzi Hidayat | Inventory Control Specialist - Ready Mix Concrete</title>
-    <meta name="description" content="Inventory Control Specialist dengan 7+ tahun pengalaman di industri Ready Mix Concrete. Spesialis perhitungan volume stockpile, tangki elips, silo semen, dan BASO multi-cabang.">
+    <meta name="description" content="Inventory Control Specialist dengan 7+ tahun pengalaman di industri Ready Mix Concrete. Spesialis perhitungan volume stockpile, tangki elips, silo semen, dan BASO multi-cabang. S2 Manajemen IPK 3.74/4.00">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -74,6 +74,7 @@
             text-decoration: none;
             font-weight: 500;
             transition: color 0.3s;
+            font-size: 0.9rem;
         }
 
         .nav-links a:hover {
@@ -113,7 +114,7 @@
         }
 
         .hero-content h1 {
-            font-size: 3rem;
+            font-size: 2.8rem;
             font-weight: 700;
             margin-bottom: 1rem;
             line-height: 1.2;
@@ -137,16 +138,23 @@
             z-index: -1;
         }
 
-        .hero-subtitle {
-            font-size: 1.25rem;
+        .hero-summary {
+            font-size: 1.1rem;
             color: var(--text-muted);
-            margin-bottom: 2rem;
+            margin: 1.5rem 0;
+            max-width: 600px;
+            line-height: 1.8;
+        }
+
+        .hero-summary strong {
+            color: var(--accent);
+            font-weight: 600;
         }
 
         .hero-stats {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 1.5rem;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
             margin: 2rem 0;
         }
 
@@ -165,16 +173,18 @@
         }
 
         .stat-number {
-            font-size: 2rem;
+            font-size: 1.8rem;
             font-weight: 700;
             color: var(--primary);
             display: block;
+            line-height: 1;
         }
 
         .stat-label {
-            font-size: 0.875rem;
+            font-size: 0.8rem;
             color: var(--text-muted);
             margin-top: 0.5rem;
+            line-height: 1.3;
         }
 
         .cta-buttons {
@@ -336,6 +346,48 @@
             margin: 0 auto;
         }
 
+        /* Achievements Section */
+        .achievements {
+            background: var(--surface);
+        }
+
+        .achievements-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .achievement-card {
+            background: var(--bg);
+            padding: 2rem;
+            border-radius: 16px;
+            border: 1px solid rgba(255,255,255,0.1);
+            text-align: left;
+            transition: transform 0.3s;
+        }
+
+        .achievement-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent);
+        }
+
+        .achievement-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .achievement-card h3 {
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+            font-size: 1.25rem;
+        }
+
+        .achievement-card p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
         /* Projects Grid */
         .projects-grid {
             display: grid;
@@ -492,6 +544,7 @@
             display: flex;
             align-items: center;
             gap: 0.5rem;
+            font-size: 1.1rem;
         }
 
         .skill-list {
@@ -549,7 +602,7 @@
 
         .timeline-item {
             position: relative;
-            margin-bottom: 2rem;
+            margin-bottom: 2.5rem;
             padding-left: 2rem;
         }
 
@@ -575,10 +628,20 @@
         .timeline-title {
             font-size: 1.25rem;
             margin-bottom: 0.5rem;
+            color: var(--text);
+        }
+
+        .timeline-company {
+            color: var(--primary);
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
         }
 
         .timeline-desc {
             color: var(--text-muted);
+            font-size: 0.9rem;
+            line-height: 1.6;
         }
 
         .cert-box {
@@ -589,6 +652,84 @@
             border-radius: 0 8px 8px 0;
         }
 
+        /* Education Section */
+        .education {
+            background: linear-gradient(135deg, var(--surface) 0%, var(--bg) 100%);
+        }
+
+        .education-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .education-card {
+            background: var(--bg);
+            padding: 2.5rem;
+            border-radius: 16px;
+            border: 1px solid rgba(255,255,255,0.1);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+
+        .education-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary);
+        }
+
+        .education-level {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: var(--primary);
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 700;
+        }
+
+        .education-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .education-card h3 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+
+        .education-major {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .education-school {
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--text);
+        }
+
+        .education-stats {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .edu-stat {
+            background: rgba(16, 185, 129, 0.1);
+            color: var(--success);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
         /* Contact Section */
         .contact {
             background: var(--surface);
@@ -596,7 +737,7 @@
         }
 
         .contact-content {
-            max-width: 600px;
+            max-width: 800px;
             margin: 0 auto;
         }
 
@@ -686,6 +827,28 @@
             50% { opacity: 0.5; }
         }
 
+        .job-openings {
+            margin-top: 2rem;
+            text-align: left;
+        }
+
+        .job-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+            list-style: none;
+        }
+
+        .job-item {
+            background: rgba(255,255,255,0.05);
+            padding: 1rem;
+            border-radius: 8px;
+            border-left: 3px solid var(--accent);
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
         /* Footer */
         footer {
             text-align: center;
@@ -696,7 +859,7 @@
         }
 
         /* Responsive */
-        @media (max-width: 768px) {
+        @media (max-width: 968px) {
             .hero-container {
                 grid-template-columns: 1fr;
                 text-align: center;
@@ -706,8 +869,13 @@
                 font-size: 2rem;
             }
 
+            .hero-summary {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
             .hero-stats {
-                grid-template-columns: 1fr;
+                grid-template-columns: repeat(2, 1fr);
             }
 
             .photo-frame img {
@@ -730,6 +898,9 @@
             .cta-buttons {
                 flex-direction: column;
                 align-items: stretch;
+                max-width: 400px;
+                margin-left: auto;
+                margin-right: auto;
             }
 
             .projects-grid {
@@ -742,6 +913,16 @@
                 font-size: 24px;
                 bottom: 20px;
                 right: 20px;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .hero-stats {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero-content h1 {
+                font-size: 1.8rem;
             }
         }
 
@@ -771,8 +952,10 @@
             <a href="#" class="logo">Fauzi Hidayat</a>
             <ul class="nav-links">
                 <li><a href="#about">Tentang</a></li>
+                <li><a href="#achievements">Pencapaian</a></li>
                 <li><a href="#projects">Proyek</a></li>
                 <li><a href="#skills">Keahlian</a></li>
+                <li><a href="#education">Pendidikan</a></li>
                 <li><a href="#contact">Kontak</a></li>
             </ul>
             <div class="mobile-menu" onclick="toggleMenu()">
@@ -784,16 +967,26 @@
     </nav>
 
     <!-- WhatsApp Floating Button -->
-    <a href="https://wa.me/6281358633340" target="_blank" class="whatsapp-float" title="Chat WhatsApp"></a>
+    <a href="https://wa.me/6281358633340?text=Halo%20Fauzi,%20saya%20tertarik%20dengan%20expertise%20Anda%20di%20Inventory%20Control" target="_blank" class="whatsapp-float" title="Chat WhatsApp"></a>
 
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-container">
             <div class="hero-content">
                 <h1>Inventory Control Specialist <span class="highlight">Ready Mix Concrete</span></h1>
-                <p class="hero-subtitle">7+ tahun mengelola inventory multi-kategori di industri beton: bulk material (pasir, batu pecah), liquid (solar, additive), powder (semen, fly ash), dan spare parts. Spesialis perhitungan volume geometrik & sistem BASO.</p>
+                
+                <p class="hero-summary">
+                    Specialist dengan track record <strong>akurasi stock opname 98%</strong> untuk 
+                    <strong>37 cabang batching plant</strong>. Mengelola aset <strong>miliaran rupiah</strong> per cabang 
+                    dengan expertise di perhitungan geometri, konversi satuan, dan digitalisasi sistem inventory. 
+                    Berpengalaman mentoring tim teknis multi-cabang melalui remote support.
+                </p>
                 
                 <div class="hero-stats">
+                    <div class="stat-card">
+                        <span class="stat-number">7+</span>
+                        <div class="stat-label">Tahun Pengalaman</div>
+                    </div>
                     <div class="stat-card">
                         <span class="stat-number">98%</span>
                         <div class="stat-label">Akurasi BASO</div>
@@ -803,20 +996,20 @@
                         <div class="stat-label">Cabang Terkelola</div>
                     </div>
                     <div class="stat-card">
-                        <span class="stat-number">6+</span>
-                        <div class="stat-label">Kategori Material</div>
+                        <span class="stat-number">S2</span>
+                        <div class="stat-label">Magister Manajemen<br>IPK 3.74/4.00</div>
                     </div>
                 </div>
 
                 <div class="cta-buttons">
                     <a href="#projects" class="btn btn-primary">Lihat Sistem Inventory</a>
-                    <a href="https://wa.me/6281358633340" target="_blank" class="btn btn-whatsapp">💬 Hubungi via WhatsApp</a>
+                    <a href="https://wa.me/6281358633340?text=Halo%20Fauzi,%20saya%20tertarik%20dengan%20expertise%20Anda%20di%20Inventory%20Control" target="_blank" class="btn btn-whatsapp">💬 Hubungi via WhatsApp</a>
                 </div>
             </div>
             
             <div class="hero-visual">
                 <div class="photo-frame">
-                    <img src="assets/foto-profil.jpg" alt="Fauzi Hidayat - Inventory Control Specialist">
+                    <img src="assets/foto-profil.jpg" alt="Fauzi Hidayat - Inventory Control Specialist" onerror="this.src='https://via.placeholder.com/280x280/2563eb/ffffff?text=FH'">
                 </div>
                 
                 <blockquote class="hero-quote">
@@ -827,6 +1020,7 @@
                     <span class="badge">🏗️ Ready Mix</span>
                     <span class="badge">📊 Stockpile</span>
                     <span class="badge">⛽ Tank Calc</span>
+                    <span class="badge">👥 Team Lead</span>
                 </div>
             </div>
         </div>
@@ -837,42 +1031,121 @@
         <div class="container">
             <div class="section-header">
                 <h2>Tentang Saya</h2>
-                <p>Inventory Control Specialist di industri Ready Mix Concrete dengan keahlian teknis geometri dan analisis data</p>
+                <p>Perjalanan karir dari Production Operator hingga Inventory Control Specialist dengan fondasi pendidikan S2 Manajemen</p>
             </div>
             
             <div class="about-content">
                 <div class="about-image">
-                    <img src="assets/foto-profil.jpg" alt="Fauzi Hidayat">
+                    <img src="assets/foto-profil.jpg" alt="Fauzi Hidayat" onerror="this.src='https://via.placeholder.com/400x500/2563eb/ffffff?text=Fauzi+Hidayat'">
                     <div style="margin-top: 1rem; text-align: center;">
-                        <a href="https://wa.me/6281358633340" target="_blank" class="btn btn-whatsapp" style="width: 100%; justify-content: center;">💬 Chat WhatsApp</a>
+                        <a href="https://wa.me/6281358633340?text=Halo%20Fauzi,%20saya%20tertarik%20dengan%20expertise%20Anda%20di%20Inventory%20Control" target="_blank" class="btn btn-whatsapp" style="width: 100%; justify-content: center;">💬 Chat WhatsApp</a>
                     </div>
                 </div>
                 
                 <div class="experience-timeline">
+                    <!-- Pendidikan S2 -->
+                    <div class="timeline-item">
+                        <div class="timeline-date">2022</div>
+                        <div class="timeline-title">Magister Manajemen (MSDM)</div>
+                        <div class="timeline-company">Universitas Wijaya Putra | IPK 3.74/4.00</div>
+                        <div class="timeline-desc">
+                            Fokus pada manajemen sumber daya manusia dan operasional supply chain. 
+                            Mengintegrasikan keilmuan manajemen strategis dengan praktik inventory control di industri manufaktur beton.
+                        </div>
+                    </div>
+
+                    <!-- Pendidikan S1 -->
+                    <div class="timeline-item">
+                        <div class="timeline-date">2017</div>
+                        <div class="timeline-title">Sarjana Manajemen (Marketing)</div>
+                        <div class="timeline-company">Universitas Wijaya Putra | IPK 3.67/4.00</div>
+                        <div class="timeline-desc">
+                            Fondasi kuat dalam analisis data, perencanaan strategis, dan manajemen operasional 
+                            yang menjadi dasar karir di bidang logistik dan inventory control.
+                        </div>
+                    </div>
+
+                    <!-- Kerjaan 1 -->
                     <div class="timeline-item">
                         <div class="timeline-date">2023 - Sekarang</div>
                         <div class="timeline-title">Staff Logistik – Inventory Control (Head Office)</div>
+                        <div class="timeline-company">PT Varia Usaha Beton</div>
                         <div class="timeline-desc">
-                            Memimpin stock opname 37 cabang batching plant dengan akurasi 98%. Mengembangkan sistem BASO (Berita Acara Stok Opname) terintegrasi dengan perhitungan volume material curah (End Area Method), tangki solar (elips), dan silo semen (tabung+kerucut). Mengelola approval transfer antar gudang dengan nilai aset miliaran rupiah.
+                            Memimpin stock opname 37 cabang batching plant dengan akurasi 98%. 
+                            Approval authority transfer antar gudang nilai miliaran rupiah. 
+                            Mengembangkan sistem BASO terintegrasi dengan perhitungan volume material curah, tangki solar (elips), dan silo semen. 
+                            Mentoring 37 petugas gudang via Zoom & Remote Desktop.
                         </div>
                     </div>
                     
+                    <!-- Kerjaan 2 -->
                     <div class="timeline-item">
                         <div class="timeline-date">2017 - 2023</div>
                         <div class="timeline-title">Production Operator</div>
+                        <div class="timeline-company">PT Varia Usaha Beton</div>
                         <div class="timeline-desc">
-                            Memastikan kualitas produksi dan koordinasi material dengan tim gudang. Membangun fondasi pemahaman operasional batching plant dan karakteristik material beton.
+                            Memastikan kualitas produksi dan koordinasi material dengan tim gudang. 
+                            Membangun fondasi pemahaman operasional batching plant dan karakteristik material beton.
                         </div>
                     </div>
 
                     <div class="cert-box">
                         <strong style="color: var(--accent);">Tools & Sistem:</strong><br>
                         • Microsoft Excel (Nested Formulas, INDEX-MATCH, PivotTables)<br>
+                        • Sunfish ERP System & Google Workspace<br>
                         • Perhitungan Volume: End Area Method, Geometri Elips, Tabung+Kerucut<br>
-                        • Material Types: Bulk (pasir/batu), Liquid (solar/additive), Powder (semen/fly ash)<br>
-                        • Quality Control: ASTM C 29 (Bulk Density), Kadar Lumpur<br>
-                        • Sunfish ERP & Database Inventory
+                        • AutoCAD & Total Station untuk pengukuran material<br>
+                        • Remote Desktop, Zoom & Team Collaboration Tools<br>
+                        • Material Types: Bulk (pasir/batu), Liquid (solar/additive), Powder (semen/fly ash)
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section id="achievements" class="achievements">
+        <div class="container">
+            <div class="section-header">
+                <h2>Pencapaian Kunci</h2>
+                <p>Track record measurable yang dihasilkan selama bertugas di PT Varia Usaha Beton</p>
+            </div>
+            
+            <div class="achievements-grid">
+                <div class="achievement-card">
+                    <div class="achievement-icon">🎯</div>
+                    <h3>98% Akurasi Stock Opname</h3>
+                    <p>Memimpin stock opname untuk 37 cabang dengan variance tolerance terjaga. Akurasi tinggi dalam rekonsiliasi fisik vs sistem.</p>
+                </div>
+                
+                <div class="achievement-card">
+                    <div class="achievement-icon">⚡</div>
+                    <h3>Efisiensi 2 Cabang/Hari</h3>
+                    <p>Mampu menyelesaikan stock opname 2 cabang dalam 1 hari untuk lokasi berdekatan, meningkatkan produktivitas tim lapangan.</p>
+                </div>
+                
+                <div class="achievement-card">
+                    <div class="achievement-icon">💰</div>
+                    <h3>Approval Authority</h3>
+                    <p>Bertanggung jawab atas approval transfer barang antar 37 cabang dengan nilai aset mulai dari 500 juta hingga miliaran rupiah per cabang.</p>
+                </div>
+                
+                <div class="achievement-card">
+                    <div class="achievement-icon">📱</div>
+                    <h3>Digitalisasi Proses</h3>
+                    <p>Berkontribusi dalam transformasi approval Berita Acara Stok Opname dari manual (tanda tangan fisik) ke sistem elektronik.</p>
+                </div>
+                
+                <div class="achievement-card">
+                    <div class="achievement-icon">📐</div>
+                    <h3>Expertise Konversi Satuan</h3>
+                    <p>Mengkonversi pengukuran material dari kubikasi (m³) ke tonase dengan akurasi tinggi menggunakan Total Station, AutoCAD, dan rumus Excel.</p>
+                </div>
+                
+                <div class="achievement-card">
+                    <div class="achievement-icon">👥</div>
+                    <h3>Knowledge Transfer</h3>
+                    <p>Mengembangkan rumus perhitungan stock untuk cabang-cabang baru dan mentoring seluruh petugas gudang 37 cabang via remote support.</p>
                 </div>
             </div>
         </div>
@@ -901,7 +1174,8 @@
                     
                     <div class="project-content">
                         <p class="project-description">
-                            Sistem Berita Acara Stok Opname terstandarisasi untuk 37 cabang dengan auto-calculation selisih fisik vs database vs in-transit. Tolerance control berbeda per kategori material.
+                            Sistem Berita Acara Stok Opname terstandarisasi untuk 37 cabang dengan auto-calculation selisih fisik vs database vs in-transit. 
+                            Tolerance control berbeda per kategori material. Termasuk modul approval digital.
                         </p>
                         
                         <div class="project-metrics">
@@ -924,6 +1198,14 @@
                                     <br>• Nilai Rupiah Selisih = Selisih × Harga Satuan
                                     <br>• Prosentase Loss = Selisih / (Fisik + In Transit) × 100
                                     <br>• Validasi tolerance per kategori material
+                                </p>
+                            </div>
+
+                            <div class="detail-section">
+                                <h4>Digitalisasi Approval</h4>
+                                <p style="color: var(--text-muted); font-size: 0.9rem;">
+                                    Transformasi dari proses manual (tanda tangan fisik & scan dokumen) ke sistem elektronik 
+                                    dengan approval hierarki otomatis dan tracking status real-time.
                                 </p>
                             </div>
 
@@ -963,14 +1245,15 @@
                         <h3>Stockpile Volume Calculator</h3>
                         <div class="project-tags">
                             <span class="tag">End Area Method</span>
-                            <span class="tag">Survey Data</span>
+                            <span class="tag">AutoCAD</span>
                             <span class="tag">Density Conv</span>
                         </div>
                     </div>
                     
                     <div class="project-content">
                         <p class="project-description">
-                            Perhitungan volume material curah (pasir, batu pecah) menggunakan metode Average End Area berdasarkan data elevasi dari Total Station. Konversi otomatis ke tonase dengan density spesifik.
+                            Perhitungan volume material curah (pasir, batu pecah) menggunakan metode Average End Area berdasarkan data survey 
+                            Total Station dan AutoCAD. Konversi otomatis ke tonase dengan density spesifik.
                         </p>
                         
                         <div class="project-metrics">
@@ -986,9 +1269,20 @@
 
                         <div id="details-2" class="project-details">
                             <div class="detail-section">
+                                <h4>Workflow Pengukuran</h4>
+                                <p style="color: var(--text-muted); font-size: 0.9rem;">
+                                    1. Survey lapangan dengan Total Station → Koordinat XYZ boundary & top stockpile<br>
+                                    2. Processing data di AutoCAD → Luas penampang (End Area)<br>
+                                    3. Input ke Excel → Auto-calculation volume (End Area Method)<br>
+                                    4. Konversi density → Tonase aktual<br>
+                                    5. Bandingkan dengan database → Variance analysis
+                                </p>
+                            </div>
+
+                            <div class="detail-section">
                                 <h4>Metode End Area</h4>
                                 <p style="color: var(--text-muted); font-size: 0.9rem;">
-                                    Menggunakan rumus prisma untuk stockpile yang terukur di lapangan dengan Total Station:
+                                    Menggunakan rumus prisma untuk stockpile yang terukur di lapangan:
                                 </p>
                                 <div class="formula-box">
                                     Volume = (Luas Atas + Luas Bawah)/2 × Beda Tinggi
@@ -1003,16 +1297,6 @@
                                     <li><strong>Batu Pecah 10-20:</strong> 1.43 - 1.66 ton/m³</li>
                                     <li><strong>Batu Pecah 20-30:</strong> 1.43 ton/m³</li>
                                 </ul>
-                            </div>
-
-                            <div class="detail-section">
-                                <h4>Workflow</h4>
-                                <p style="color: var(--text-muted); font-size: 0.9rem;">
-                                    1. Survey Total Station → Koordinat XYZ boundary & top stockpile<br>
-                                    2. Input ke Excel → Auto-calculation luas & volume<br>
-                                    3. Konversi density → Tonase aktual<br>
-                                    4. Bandingkan dengan database → Variance analysis
-                                </p>
                             </div>
                         </div>
 
@@ -1036,7 +1320,8 @@
                     
                     <div class="project-content">
                         <p class="project-description">
-                            Sistem perhitungan volume tangki solar horizontal berbentuk elips dan tangki additive bulat. Menggunakan tabel lookup untuk konversi kedalaman ke volume (hubungan non-linear).
+                            Sistem perhitungan volume tangki solar horizontal berbentuk elips dan tangki additive bulat. 
+                            Menggunakan tabel lookup untuk konversi kedalaman ke volume (hubungan non-linear).
                         </p>
                         
                         <div class="project-metrics">
@@ -1054,7 +1339,7 @@
                             <div class="detail-section">
                                 <h4>Tangki Horizontal (Elips)</h4>
                                 <p style="color: var(--text-muted); font-size: 0.9rem;">
-                                    Untuk tangki solar dengan dimensi:
+                                    Untuk tangki solar dengan dimensi spesifik per cabang:
                                     <br>• Panjang: 182.5 cm
                                     <br>• Lebar: 167 cm  
                                     <br>• Tinggi: 105 cm
@@ -1106,7 +1391,8 @@
                     
                     <div class="project-content">
                         <p class="project-description">
-                            Perhitungan volume silo semen dan fly ash dengan geometri kombinasi tabung (cylinder) dan kerucut (cone). Konversi ke ton dengan density 1.17 ton/m³ (semen) dan 1.0 ton/m³ (fly ash).
+                            Perhitungan volume silo semen dan fly ash dengan geometri kombinasi tabung (cylinder) dan kerucut (cone). 
+                            Konversi ke ton dengan density 1.17 ton/m³ (semen) dan 1.0 ton/m³ (fly ash).
                         </p>
                         
                         <div class="project-metrics">
@@ -1154,6 +1440,108 @@
                         </button>
                     </div>
                 </div>
+
+                <!-- Project 5: Mentoring System -->
+                <div class="project-card" onclick="toggleDetails(5)">
+                    <div class="project-header">
+                        <div class="project-icon">👨‍🏫</div>
+                        <h3>Remote Mentoring System</h3>
+                        <div class="project-tags">
+                            <span class="tag">Knowledge Transfer</span>
+                            <span class="tag">Zoom Training</span>
+                            <span class="tag">SOP Development</span>
+                        </div>
+                    </div>
+                    
+                    <div class="project-content">
+                        <p class="project-description">
+                            Sistem pendampingan teknis untuk 37 petugas gudang cabang melalui remote desktop, Zoom, dan telepon. 
+                            Pengembangan SOP perhitungan untuk cabang-cabang baru dan standardisasi proses inventory.
+                        </p>
+                        
+                        <div class="project-metrics">
+                            <div class="metric">
+                                <div class="metric-value">37</div>
+                                <div class="metric-label">Petugas Termentor</div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-value">100%</div>
+                                <div class="metric-label">Remote Support</div>
+                            </div>
+                        </div>
+
+                        <div id="details-5" class="project-details">
+                            <div class="detail-section">
+                                <h4>Metode Mentoring</h4>
+                                <p style="color: var(--text-muted); font-size: 0.9rem;">
+                                    • <strong>Zoom Training:</strong> Sesi pelatihan periodik untuk cabang baru<br>
+                                    • <strong>Remote Desktop:</strong> Troubleshooting real-time untuk masalah sistem<br>
+                                    • <strong>Dokumentasi:</strong> Pembuatan manual penggunaan template Excel<br>
+                                    • <strong>SOP:</strong> Standarisasi prosedur stock opname antar cabang
+                                </p>
+                            </div>
+
+                            <div class="detail-section">
+                                <h4>Coverage Support</h4>
+                                <p style="color: var(--text-muted); font-size: 0.9rem;">
+                                    Support teknis meliputi: troubleshooting rumus Excel, validasi hasil perhitungan, 
+                                    konsultasi tolerance material, approval transfer urgent, dan verifikasi data anomali.
+                                </p>
+                            </div>
+                        </div>
+
+                        <button class="expand-btn" onclick="event.stopPropagation(); toggleDetails(5)">
+                            Lihat Detail Teknis ↓
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Project 6: Efficiency Optimization -->
+                <div class="project-card" onclick="toggleDetails(6)">
+                    <div class="project-header">
+                        <div class="project-icon">⚡</div>
+                        <h3>Operational Efficiency</h3>
+                        <div class="project-tags">
+                            <span class="tag">2 Branch/Day</span>
+                            <span class="tag">Route Optimization</span>
+                            <span class="tag">Time Management</span>
+                        </div>
+                    </div>
+                    
+                    <div class="project-content">
+                        <p class="project-description">
+                            Optimasi jadwal dan rute kunjungan stock opname untuk mencapai efisiensi 2 cabang dalam 1 hari 
+                            untuk lokasi berdekatan, meningkatkan produktivitas tim lapangan.
+                        </p>
+                        
+                        <div class="project-metrics">
+                            <div class="metric">
+                                <div class="metric-value">2x</div>
+                                <div class="metric-label">Lebih Efisien</div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-value">50%</div>
+                                <div class="metric-label">Penghematan Waktu</div>
+                            </div>
+                        </div>
+
+                        <div id="details-6" class="project-details">
+                            <div class="detail-section">
+                                <h4>Strategi Optimasi</h4>
+                                <p style="color: var(--text-muted); font-size: 0.9rem;">
+                                    • <strong>Clustering:</strong> Pengelompokan cabang berdekatan dalam 1 hari kunjungan<br>
+                                    • <strong>Preparation:</strong> Data pre-check sebelum kunjungan untuk mempercepat proses<br>
+                                    • <strong>Parallel Processing:</strong> Tim split untuk hitung material berbeda secara bersamaan<br>
+                                    • <strong>Digital Tools:</strong> Penggunaan aplikasi mobile untuk input data real-time
+                                </p>
+                            </div>
+                        </div>
+
+                        <button class="expand-btn" onclick="event.stopPropagation(); toggleDetails(6)">
+                            Lihat Detail Teknis ↓
+                        </button>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -1162,8 +1550,8 @@
     <section id="skills" class="skills">
         <div class="container">
             <div class="section-header">
-                <h2>Keahlian Teknis</h2>
-                <p>Kombinasi keahlian inventory management dan perhitungan geometri untuk industri konstruksi</p>
+                <h2>Keahlian Teknis & Soft Skills</h2>
+                <p>Kombinasi keahlian inventory management, perhitungan geometri, dan leadership untuk industri konstruksi</p>
             </div>
 
             <div class="skills-grid">
@@ -1192,14 +1580,14 @@
                 </div>
 
                 <div class="skill-category">
-                    <h3>💻 Excel & Data</h3>
+                    <h3>💻 Software & Tools</h3>
                     <ul class="skill-list">
-                        <li>Advanced Formulas (Nested IF)</li>
-                        <li>INDEX-MATCH & VLOOKUP</li>
-                        <li>Conditional Formatting</li>
-                        <li>PivotTables & Dashboard</li>
-                        <li>Template BASO Otomatis</li>
-                        <li>Variance Analysis</li>
+                        <li>Sunfish ERP System</li>
+                        <li>Microsoft Excel (Advanced)</li>
+                        <li>Google Workspace</li>
+                        <li>AutoCAD (Pengukuran Material)</li>
+                        <li>Total Station Operation</li>
+                        <li>Remote Desktop & Zoom</li>
                     </ul>
                 </div>
 
@@ -1208,11 +1596,91 @@
                     <ul class="skill-list">
                         <li>Stock Opname Multi-Cabang</li>
                         <li>Tolerance Control System</li>
-                        <li>Transfer Approval</li>
+                        <li>Transfer Approval Authority</li>
                         <li>In-Transit Tracking</li>
                         <li>Loss Prevention Analysis</li>
-                        <li>Sunfish ERP</li>
+                        <li>Digitalisasi Proses</li>
                     </ul>
+                </div>
+
+                <div class="skill-category">
+                    <h3>👥 Soft Skills & Leadership</h3>
+                    <ul class="skill-list">
+                        <li>Technical Support Multi-Cabang</li>
+                        <li>Team Mentoring & Training</li>
+                        <li>Cross-Branch Coordination</li>
+                        <li>Remote Collaboration</li>
+                        <li>Knowledge Transfer</li>
+                        <li>Analytical Problem Solving</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <h3>🌐 Bahasa</h3>
+                    <ul class="skill-list">
+                        <li>Bahasa Indonesia (Native)</li>
+                        <li>Bahasa Inggris - Reading (Good)</li>
+                        <li>Bahasa Inggris - Speaking (Basic)</li>
+                        <li>Technical Documentation</li>
+                        <li>SOP Writing</li>
+                        <li>Report Presentation</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="education">
+        <div class="container">
+            <div class="section-header">
+                <h2>Latar Belakang Pendidikan</h2>
+                <p>Pendidikan tinggi di bidang manajemen dengan fokus pada operasional dan sumber daya manusia</p>
+            </div>
+            
+            <div class="education-grid">
+                <!-- S2 -->
+                <div class="education-card">
+                    <div class="education-level">S2</div>
+                    <div class="education-icon">🎓</div>
+                    <h3>Magister Manajemen</h3>
+                    <p class="education-major">Konsentrasi MSDM</p>
+                    <p class="education-school">Universitas Wijaya Putra</p>
+                    <div class="education-stats">
+                        <span class="edu-stat">IPK 3.74/4.00</span>
+                        <span class="edu-stat">2022</span>
+                    </div>
+                    <p style="color: var(--text-muted); font-size: 0.85rem; margin-top: 1rem; line-height: 1.5;">
+                        Fokus pada manajemen operasional dan pengembangan sumber daya manusia. 
+                        Mengintegrasikan keilmuan strategis dengan praktik inventory control.
+                    </p>
+                </div>
+
+                <!-- S1 -->
+                <div class="education-card">
+                    <div class="education-level">S1</div>
+                    <div class="education-icon">📚</div>
+                    <h3>Sarjana Manajemen</h3>
+                    <p class="education-major">Konsentrasi Marketing</p>
+                    <p class="education-school">Universitas Wijaya Putra</p>
+                    <div class="education-stats">
+                        <span class="edu-stat">IPK 3.67/4.00</span>
+                        <span class="edu-stat">2017</span>
+                    </div>
+                    <p style="color: var(--text-muted); font-size: 0.85rem; margin-top: 1rem; line-height: 1.5;">
+                        Fondasi kuat dalam analisis data dan perencanaan strategis yang menjadi 
+                        dasar karir di bidang logistik dan manajemen inventory.
+                    </p>
+                </div>
+            </div>
+
+            <div class="cert-box" style="margin-top: 3rem; text-align: center;">
+                <strong style="color: var(--accent);">Relevansi Pendidikan dengan Pekerjaan:</strong><br>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; margin-top: 1rem; text-align: left;">
+                    <div>• <strong>Manajemen Operasional (S2):</strong> Supply chain & inventory control</div>
+                    <div>• <strong>MSDM (S2):</strong> Skill mentoring 37 cabang & koordinasi tim</div>
+                    <div>• <strong>Marketing (S1):</strong> Analisis data & perencanaan strategis</div>
+                    <div>• <strong>Statistik:</strong> Variance analysis & forecasting</div>
                 </div>
             </div>
         </div>
@@ -1224,7 +1692,9 @@
             <div class="contact-content">
                 <h2>Tertarik Berkolaborasi?</h2>
                 <p style="color: var(--text-muted); margin: 1rem 0;">
-                    Saya terbuka untuk kesempatan di bidang Inventory Control, Warehouse Management, atau Logistik di industri Ready Mix Concrete, Manufaktur, atau Konstruksi.
+                    Saya terbuka untuk kesempatan di bidang Inventory Control, Warehouse Management, 
+                    Logistics Coordination, atau Supply Chain Analyst di industri Ready Mix Concrete, 
+                    Manufaktur, atau Konstruksi.
                 </p>
                 
                 <div class="availability-status">
@@ -1232,13 +1702,13 @@
                 </div>
                 
                 <div class="contact-grid">
-                    <a href="mailto:fauzi536@gmail.com" class="contact-card">
+                    <a href="mailto:fauzih536@gmail.com" class="contact-card">
                         <div class="contact-icon">📧</div>
                         <div class="contact-label">Email</div>
-                        <div class="contact-value">fauzi536@gmail.com</div>
+                        <div class="contact-value">fauzih536@gmail.com</div>
                     </a>
 
-                    <a href="https://wa.me/6281358633340" target="_blank" class="contact-card whatsapp">
+                    <a href="https://wa.me/6281358633340?text=Halo%20Fauzi,%20saya%20tertarik%20dengan%20expertise%20Anda%20di%20Inventory%20Control" target="_blank" class="contact-card whatsapp">
                         <div class="contact-icon">💬</div>
                         <div class="contact-label">WhatsApp</div>
                         <div class="contact-value">+62 813-5863-3340</div>
@@ -1250,19 +1720,38 @@
                         <div class="contact-value">Fauzi Hidayat</div>
                     </a>
 
-                    <a href="assets/cv-fauzi-hidayat.pdf" download class="contact-card">
+                    <a href="https://fauzihidayat536.github.io/portofolio/" target="_blank" class="contact-card">
+                        <div class="contact-icon">🌐</div>
+                        <div class="contact-label">Portfolio Online</div>
+                        <div class="contact-value">GitHub Pages</div>
+                    </a>
+
+                    <a href="assets/cv-fauzi-hidayat.pdf" download class="contact-card" style="grid-column: 1 / -1;">
                         <div class="contact-icon">📄</div>
-                        <div class="contact-label">Download CV</div>
+                        <div class="contact-label">Download CV Lengkap</div>
                         <div class="contact-value">PDF Format</div>
                     </a>
+                </div>
+
+                <div class="job-openings">
+                    <h3 style="color: var(--primary); margin-bottom: 1rem;">Posisi yang Saya Cari:</h3>
+                    <ul class="job-list">
+                        <li class="job-item">Inventory Control Specialist</li>
+                        <li class="job-item">Warehouse Manager</li>
+                        <li class="job-item">Logistics Coordinator</li>
+                        <li class="job-item">Supply Chain Analyst</li>
+                        <li class="job-item">Plant Inventory Supervisor</li>
+                        <li class="job-item">Material Management Specialist</li>
+                    </ul>
                 </div>
 
                 <div class="highlight-box">
                     <h3>💡 Keunggulan Sistem Saya</h3>
                     <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.5rem;">
-                        Sistem Excel yang saya bangun <strong>tidak memerlukan VBA/macro</strong>, sehingga aman digunakan di environment korporat dengan security policy ketat. Semua perhitungan menggunakan rumus matematika murni (geometri, lookup, dan logical functions) untuk hasil yang transparan dan audit-able.
+                        Sistem Excel yang saya bangun <strong>tidak memerlukan VBA/macro</strong>, sehingga aman digunakan di environment korporat dengan security policy ketat. 
+                        Semua perhitungan menggunakan rumus matematika murni (geometri, lookup, dan logical functions) untuk hasil yang transparan dan audit-able.
                     </p>
-                    <a href="https://wa.me/6281358633340" target="_blank" class="btn btn-whatsapp" style="width: 100%; justify-content: center; padding: 1rem;">
+                    <a href="https://wa.me/6281358633340?text=Halo%20Fauzi,%20saya%20tertarik%20dengan%20expertise%20Anda%20di%20Inventory%20Control" target="_blank" class="btn btn-whatsapp" style="width: 100%; justify-content: center; padding: 1rem;">
                         💬 Hubungi Saya via WhatsApp Sekarang
                     </a>
                 </div>
@@ -1274,8 +1763,9 @@
         <p>© 2026 Fauzi Hidayat • Inventory Control Specialist - Ready Mix Concrete</p>
         <p style="margin-top: 0.5rem; font-size: 0.875rem;">
             <a href="https://wa.me/6281358633340" target="_blank" style="color: var(--whatsapp); text-decoration: none;">WhatsApp</a> • 
-            <a href="mailto:fauzi536@gmail.com" style="color: var(--primary); text-decoration: none;">Email</a> • 
-            <a href="https://www.linkedin.com/in/fauzi-hidayat-a270a5209/" target="_blank" style="color: var(--primary); text-decoration: none;">LinkedIn</a>
+            <a href="mailto:fauzih536@gmail.com" style="color: var(--primary); text-decoration: none;">Email</a> • 
+            <a href="https://www.linkedin.com/in/fauzi-hidayat-a270a5209/" target="_blank" style="color: var(--primary); text-decoration: none;">LinkedIn</a> • 
+            <a href="https://fauzihidayat536.github.io/portofolio/" target="_blank" style="color: var(--accent); text-decoration: none;">Portfolio</a>
         </p>
     </footer>
 
