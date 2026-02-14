@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fauzi Hidayat | Inventory Control & Warehouse Specialist</title>
-    <meta name="description" content="Inventory Control Specialist dengan 7+ tahun pengalaman mengelola 37 cabang dengan akurasi 98%. Expert di Total Station, AutoCAD, Excel Automation, dan Warehouse Management.">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <title>Fauzi Hidayat | Inventory Control Specialist - Ready Mix Concrete</title>
+    <meta name="description" content="Inventory Control Specialist dengan 7+ tahun pengalaman di industri Ready Mix Concrete. Spesialis perhitungan volume stockpile, tangki elips, silo semen, dan BASO multi-cabang.">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
             --primary: #2563eb;
@@ -17,9 +17,9 @@
             --text: #f8fafc;
             --text-muted: #94a3b8;
             --success: #10b981;
-            --danger: #ef4444;
             --whatsapp: #25d366;
             --whatsapp-dark: #128c7e;
+            --concrete: #6b7280;
         }
 
         * {
@@ -91,7 +91,6 @@
             width: 25px;
             height: 3px;
             background: var(--text);
-            transition: 0.3s;
         }
 
         /* Hero Section */
@@ -102,19 +101,6 @@
             padding: 6rem 2rem 4rem;
             background: linear-gradient(135deg, var(--bg) 0%, var(--surface) 100%);
             position: relative;
-            overflow: hidden;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            right: -10%;
-            width: 600px;
-            height: 600px;
-            background: radial-gradient(circle, var(--primary) 0%, transparent 70%);
-            opacity: 0.1;
-            pointer-events: none;
         }
 
         .hero-container {
@@ -127,7 +113,7 @@
         }
 
         .hero-content h1 {
-            font-size: 3.5rem;
+            font-size: 3rem;
             font-weight: 700;
             margin-bottom: 1rem;
             line-height: 1.2;
@@ -170,7 +156,7 @@
             border-radius: 12px;
             border: 1px solid rgba(255,255,255,0.1);
             text-align: center;
-            transition: transform 0.3s, border-color 0.3s;
+            transition: transform 0.3s;
         }
 
         .stat-card:hover {
@@ -224,17 +210,6 @@
             box-shadow: 0 10px 20px rgba(37, 99, 235, 0.3);
         }
 
-        .btn-secondary {
-            background: transparent;
-            color: var(--text);
-            border: 2px solid var(--secondary);
-        }
-
-        .btn-secondary:hover {
-            border-color: var(--primary);
-            color: var(--primary);
-        }
-
         .btn-whatsapp {
             background: var(--whatsapp);
             color: white;
@@ -243,9 +218,60 @@
 
         .btn-whatsapp:hover {
             background: var(--whatsapp-dark);
-            border-color: var(--whatsapp-dark);
             transform: translateY(-2px);
             box-shadow: 0 10px 20px rgba(37, 211, 102, 0.3);
+        }
+
+        /* Hero Visual */
+        .hero-visual {
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .photo-frame {
+            position: relative;
+            display: inline-block;
+            padding: 4px;
+            background: linear-gradient(135deg, var(--primary), var(--whatsapp));
+            border-radius: 20px;
+            margin-bottom: 2rem;
+        }
+
+        .photo-frame img {
+            width: 280px;
+            height: 280px;
+            border-radius: 16px;
+            object-fit: cover;
+            display: block;
+            border: 4px solid var(--bg);
+        }
+
+        .hero-quote {
+            font-style: italic;
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0 1rem;
+            border-left: 3px solid var(--primary);
+            text-align: left;
+        }
+
+        .hero-badges {
+            margin-top: 2rem;
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .badge {
+            background: rgba(37, 99, 235, 0.2);
+            color: var(--primary);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
         }
 
         /* WhatsApp Floating Button */
@@ -278,27 +304,6 @@
             content: '💬';
         }
 
-        .whatsapp-tooltip {
-            position: fixed;
-            bottom: 100px;
-            right: 30px;
-            background: white;
-            color: #333;
-            padding: 8px 16px;
-            border-radius: 8px;
-            font-size: 14px;
-            font-weight: 600;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-            opacity: 0;
-            transition: opacity 0.3s;
-            pointer-events: none;
-            z-index: 998;
-        }
-
-        .whatsapp-float:hover + .whatsapp-tooltip {
-            opacity: 1;
-        }
-
         @keyframes pulse {
             0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
             70% { box-shadow: 0 0 0 20px rgba(37, 211, 102, 0); }
@@ -323,7 +328,6 @@
         .section-header h2 {
             font-size: 2.5rem;
             margin-bottom: 1rem;
-            color: var(--text);
         }
 
         .section-header p {
@@ -344,7 +348,7 @@
             border-radius: 16px;
             overflow: hidden;
             border: 1px solid rgba(255,255,255,0.1);
-            transition: transform 0.3s, box-shadow 0.3s;
+            transition: transform 0.3s;
             cursor: pointer;
         }
 
@@ -450,24 +454,6 @@
             letter-spacing: 0.05em;
         }
 
-        .code-block {
-            background: #0d1117;
-            border: 1px solid #30363d;
-            border-radius: 8px;
-            padding: 1rem;
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 0.8rem;
-            overflow-x: auto;
-            margin: 1rem 0;
-            color: #c9d1d9;
-        }
-
-        .code-comment { color: #8b949e; }
-        .code-keyword { color: #ff7b72; }
-        .code-function { color: #d2a8ff; }
-        .code-string { color: #a5d6ff; }
-        .code-number { color: #79c0ff; }
-
         .expand-btn {
             width: 100%;
             padding: 0.75rem;
@@ -518,6 +504,7 @@
             display: flex;
             align-items: center;
             gap: 0.5rem;
+            font-size: 0.9rem;
         }
 
         .skill-list li::before {
@@ -537,17 +524,11 @@
             position: relative;
         }
 
-        .image-placeholder {
+        .about-image img {
             width: 100%;
-            aspect-ratio: 1;
-            background: var(--surface);
             border-radius: 16px;
-            border: 2px dashed var(--secondary);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--text-muted);
-            font-size: 3rem;
+            border: 3px solid var(--primary);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
         }
 
         .experience-timeline {
@@ -600,6 +581,14 @@
             color: var(--text-muted);
         }
 
+        .cert-box {
+            margin-top: 2rem;
+            padding: 1.5rem;
+            background: rgba(245, 158, 11, 0.1);
+            border-left: 4px solid var(--accent);
+            border-radius: 0 8px 8px 0;
+        }
+
         /* Contact Section */
         .contact {
             background: var(--surface);
@@ -644,7 +633,6 @@
 
         .contact-label {
             font-weight: 600;
-            color: var(--text);
         }
 
         .contact-value {
@@ -669,11 +657,6 @@
             background: linear-gradient(135deg, rgba(37, 99, 235, 0.1) 0%, rgba(37, 211, 102, 0.1) 100%);
             border-radius: 16px;
             border: 1px solid rgba(255,255,255,0.1);
-        }
-
-        .highlight-box h3 {
-            margin-bottom: 1rem;
-            color: var(--text);
         }
 
         .availability-status {
@@ -727,6 +710,11 @@
                 grid-template-columns: 1fr;
             }
 
+            .photo-frame img {
+                width: 200px;
+                height: 200px;
+            }
+
             .about-content {
                 grid-template-columns: 1fr;
             }
@@ -757,19 +745,21 @@
             }
         }
 
-        /* Smooth Scroll */
         html {
             scroll-behavior: smooth;
         }
 
-        /* Animation */
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        .fade-in {
-            animation: fadeIn 0.6s ease-out;
+        /* Formula Box */
+        .formula-box {
+            background: rgba(0,0,0,0.3);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 8px;
+            padding: 1rem;
+            font-family: 'Courier New', monospace;
+            font-size: 0.85rem;
+            color: var(--accent);
+            margin: 0.5rem 0;
+            overflow-x: auto;
         }
     </style>
 </head>
@@ -795,56 +785,48 @@
 
     <!-- WhatsApp Floating Button -->
     <a href="https://wa.me/6281358633340" target="_blank" class="whatsapp-float" title="Chat WhatsApp"></a>
-    <div class="whatsapp-tooltip">💬 Chat dengan Fauzi</div>
 
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-container">
             <div class="hero-content">
-                <h1>Inventory Control <span class="highlight">& Warehouse Specialist</span></h1>
-                <p class="hero-subtitle">7+ tahun mengoptimalkan sistem inventory multi-cabang dengan integrasi teknologi survey, otomasi Excel, dan analisis data presisi.</p>
+                <h1>Inventory Control Specialist <span class="highlight">Ready Mix Concrete</span></h1>
+                <p class="hero-subtitle">7+ tahun mengelola inventory multi-kategori di industri beton: bulk material (pasir, batu pecah), liquid (solar, additive), powder (semen, fly ash), dan spare parts. Spesialis perhitungan volume geometrik & sistem BASO.</p>
                 
                 <div class="hero-stats">
                     <div class="stat-card">
                         <span class="stat-number">98%</span>
-                        <div class="stat-label">Akurasi Stock Opname</div>
+                        <div class="stat-label">Akurasi BASO</div>
                     </div>
                     <div class="stat-card">
                         <span class="stat-number">37</span>
                         <div class="stat-label">Cabang Terkelola</div>
                     </div>
                     <div class="stat-card">
-                        <span class="stat-number">90%</span>
-                        <div class="stat-label">Efisiensi Waktu</div>
+                        <span class="stat-number">6+</span>
+                        <div class="stat-label">Kategori Material</div>
                     </div>
                 </div>
 
                 <div class="cta-buttons">
-                    <a href="#projects" class="btn btn-primary">Lihat Proyek Teknis</a>
+                    <a href="#projects" class="btn btn-primary">Lihat Sistem Inventory</a>
                     <a href="https://wa.me/6281358633340" target="_blank" class="btn btn-whatsapp">💬 Hubungi via WhatsApp</a>
                 </div>
             </div>
+            
             <div class="hero-visual">
-                <div style="background: var(--surface); padding: 2rem; border-radius: 16px; border: 1px solid rgba(255,255,255,0.1);">
-                    <div style="font-family: 'JetBrains Mono', monospace; font-size: 0.8rem; color: var(--text-muted); margin-bottom: 1rem;">// System Status: Online</div>
-                    <div style="display: grid; gap: 0.5rem;">
-                        <div style="display: flex; justify-content: space-between; padding: 0.5rem; background: rgba(37, 99, 235, 0.1); border-radius: 4px;">
-                            <span>Total Station</span>
-                            <span style="color: var(--success);">● Connected</span>
-                        </div>
-                        <div style="display: flex; justify-content: space-between; padding: 0.5rem; background: rgba(37, 99, 235, 0.1); border-radius: 4px;">
-                            <span>AutoCAD</span>
-                            <span style="color: var(--success);">● Active</span>
-                        </div>
-                        <div style="display: flex; justify-content: space-between; padding: 0.5rem; background: rgba(37, 99, 235, 0.1); border-radius: 4px;">
-                            <span>Excel Automation</span>
-                            <span style="color: var(--success);">● Running</span>
-                        </div>
-                        <div style="display: flex; justify-content: space-between; padding: 0.5rem; background: rgba(37, 99, 235, 0.1); border-radius: 4px;">
-                            <span>Database Sync</span>
-                            <span style="color: var(--success);">● 37 Nodes</span>
-                        </div>
-                    </div>
+                <div class="photo-frame">
+                    <img src="assets/foto-profil.jpg" alt="Fauzi Hidayat - Inventory Control Specialist">
+                </div>
+                
+                <blockquote class="hero-quote">
+                    "Presisi dalam pengukuran geometri, akurasi dalam rekonsiliasi data. Setiap ton material tercatat dengan tepat untuk menjamin kontinuitas produksi beton."
+                </blockquote>
+                
+                <div class="hero-badges">
+                    <span class="badge">🏗️ Ready Mix</span>
+                    <span class="badge">📊 Stockpile</span>
+                    <span class="badge">⛽ Tank Calc</span>
                 </div>
             </div>
         </div>
@@ -855,12 +837,12 @@
         <div class="container">
             <div class="section-header">
                 <h2>Tentang Saya</h2>
-                <p>Spesialis Inventory Control dengan pendekatan teknikal dan data-driven</p>
+                <p>Inventory Control Specialist di industri Ready Mix Concrete dengan keahlian teknis geometri dan analisis data</p>
             </div>
             
             <div class="about-content">
                 <div class="about-image">
-                    <img src="assets/foto-profil.jpg" alt="Fauzi Hidayat" style="width: 100%; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.3); border: 3px solid var(--primary);">
+                    <img src="assets/foto-profil.jpg" alt="Fauzi Hidayat">
                     <div style="margin-top: 1rem; text-align: center;">
                         <a href="https://wa.me/6281358633340" target="_blank" class="btn btn-whatsapp" style="width: 100%; justify-content: center;">💬 Chat WhatsApp</a>
                     </div>
@@ -871,7 +853,7 @@
                         <div class="timeline-date">2023 - Sekarang</div>
                         <div class="timeline-title">Staff Logistik – Inventory Control (Head Office)</div>
                         <div class="timeline-desc">
-                            Memimpin stock opname 37 cabang dengan akurasi 98%. Mengembangkan sistem perhitungan otomatis untuk tangki solar (elips) dan silo semen. Bertanggung jawab atas approval transfer barang antar gudang dengan nilai aset miliaran rupiah.
+                            Memimpin stock opname 37 cabang batching plant dengan akurasi 98%. Mengembangkan sistem BASO (Berita Acara Stok Opname) terintegrasi dengan perhitungan volume material curah (End Area Method), tangki solar (elips), dan silo semen (tabung+kerucut). Mengelola approval transfer antar gudang dengan nilai aset miliaran rupiah.
                         </div>
                     </div>
                     
@@ -879,16 +861,17 @@
                         <div class="timeline-date">2017 - 2023</div>
                         <div class="timeline-title">Production Operator</div>
                         <div class="timeline-desc">
-                            Memastikan kualitas produksi dan koordinasi material dengan tim gudang. Membangun fondasi pemahaman operasional manufacturing yang kuat.
+                            Memastikan kualitas produksi dan koordinasi material dengan tim gudang. Membangun fondasi pemahaman operasional batching plant dan karakteristik material beton.
                         </div>
                     </div>
 
-                    <div style="margin-top: 2rem; padding: 1.5rem; background: rgba(245, 158, 11, 0.1); border-left: 4px solid var(--accent); border-radius: 0 8px 8px 0;">
-                        <strong style="color: var(--accent);">Sertifikasi & Keahlian Teknis:</strong><br>
-                        • Total Station Operation & AutoCAD 3D Modeling<br>
-                        • Advanced Excel (VBA, Complex Formulas, Pivot)<br>
-                        • Sunfish ERP & Database Management<br>
-                        • Stockpile Volume Calculation (Average End Area Method)
+                    <div class="cert-box">
+                        <strong style="color: var(--accent);">Tools & Sistem:</strong><br>
+                        • Microsoft Excel (Nested Formulas, INDEX-MATCH, PivotTables)<br>
+                        • Perhitungan Volume: End Area Method, Geometri Elips, Tabung+Kerucut<br>
+                        • Material Types: Bulk (pasir/batu), Liquid (solar/additive), Powder (semen/fly ash)<br>
+                        • Quality Control: ASTM C 29 (Bulk Density), Kadar Lumpur<br>
+                        • Sunfish ERP & Database Inventory
                     </div>
                 </div>
             </div>
@@ -899,197 +882,26 @@
     <section id="projects" class="projects">
         <div class="container">
             <div class="section-header">
-                <h2>Proyek Teknis Unggulan</h2>
-                <p>Sistem yang saya kembangkan untuk optimalisasi inventory control</p>
+                <h2>Sistem Inventory yang Dikembangkan</h2>
+                <p>Template Excel khusus untuk industri Ready Mix Concrete dengan perhitungan geometri presisi</p>
             </div>
 
             <div class="projects-grid">
-                <!-- Project 1: Tank Calculator -->
+                <!-- Project 1: BASO System -->
                 <div class="project-card" onclick="toggleDetails(1)">
                     <div class="project-header">
-                        <div class="project-icon">⛽</div>
-                        <h3>Smart Tank Volume Calculator</h3>
+                        <div class="project-icon">📋</div>
+                        <h3>Multi-Branch BASO System</h3>
                         <div class="project-tags">
-                            <span class="tag">Excel</span>
-                            <span class="tag">Geometry</span>
-                            <span class="tag">Automation</span>
+                            <span class="tag">Excel Formulas</span>
+                            <span class="tag">Variance Analysis</span>
+                            <span class="tag">Tolerance Control</span>
                         </div>
                     </div>
                     
                     <div class="project-content">
                         <p class="project-description">
-                            Sistem perhitungan otomatis volume tangki horizontal berbentuk elips untuk solar dan tangki vertikal untuk semen. Menggunakan formula geometri non-linear dengan tabel lookup konversi kedalaman ke volume.
-                        </p>
-                        
-                        <div class="project-metrics">
-                            <div class="metric">
-                                <div class="metric-value">90%</div>
-                                <div class="metric-label">Lebih Cepat</div>
-                            </div>
-                            <div class="metric">
-                                <div class="metric-value">±1.5%</div>
-                                <div class="metric-label">Akurasi</div>
-                            </div>
-                        </div>
-
-                        <div id="details-1" class="project-details">
-                            <div class="detail-section">
-                                <h4>Problem</h4>
-                                <p style="color: var(--text-muted); font-size: 0.9rem;">
-                                    Perhitungan manual volume tangki elips memakan waktu 45 menit dengan error rate 15%. Hubungan antara kedalaman cairan dan volume tidak linear, memerlukan interpolasi kompleks.
-                                </p>
-                            </div>
-
-                            <div class="detail-section">
-                                <h4>Solution & Formula</h4>
-                                <div class="code-block">
-<span class="code-comment">' Horizontal Elliptical Tank Calculation</span>
-<span class="code-keyword">Function</span> <span class="code-function">CalculateVolume</span>(Length, Height, Width, Depth)
-    r1 = Height / 2
-    r2 = Width / 2
-    <span class="code-comment">' Area of ellipse segment based on depth</span>
-    Area = <span class="code-function">EllipseSegmentArea</span>(r1, r2, Depth)
-    Volume = Area * Length
-    <span class="code-keyword">Return</span> Volume * <span class="code-number">0.001</span> <span class="code-comment">' Convert to liters</span>
-<span class="code-keyword">End Function</span>
-
-<span class="code-comment">' Lookup Table for Non-linear Conversion</span>
-Depth(%)    Volume(%)
-<span class="code-number">5%</span>         →   <span class="code-number">1.36%</span>
-<span class="code-number">10%</span>        →   <span class="code-number">3.82%</span>
-<span class="code-number">50%</span>        →   <span class="code-number">39.68%</span>
-<span class="code-number">80%</span>        →   <span class="code-number">75.21%</span>
-                                </div>
-                            </div>
-
-                            <div class="detail-section">
-                                <h4>Impact</h4>
-                                <ul style="color: var(--text-muted); font-size: 0.9rem; padding-left: 1.2rem;">
-                                    <li>Waktu perhitungan: 45 menit → 5 menit</li>
-                                    <li>Standarisasi template untuk 37 cabang</li>
-                                    <li>Prevent stock out dengan alert otomatis</li>
-                                    <li>Validasi data input untuk mencegah human error</li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <button class="expand-btn" onclick="event.stopPropagation(); toggleDetails(1)">
-                            Lihat Detail Teknis ↓
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Project 2: 3D Measurement -->
-                <div class="project-card" onclick="toggleDetails(2)">
-                    <div class="project-header">
-                        <div class="project-icon">📐</div>
-                        <h3>3D Stockpile Measurement System</h3>
-                        <div class="project-tags">
-                            <span class="tag">Total Station</span>
-                            <span class="tag">AutoCAD</span>
-                            <span class="tag">Survey</span>
-                        </div>
-                    </div>
-                    
-                    <div class="project-content">
-                        <p class="project-description">
-                            Workflow end-to-end untuk pengukuran volume material curah (pasir, batu pecah) menggunakan Total Station, pemodelan 3D di AutoCAD, dan perhitungan volume dengan metode Average End Area di Excel.
-                        </p>
-                        
-                        <div class="project-metrics">
-                            <div class="metric">
-                                <div class="metric-value">98%</div>
-                                <div class="metric-label">Akurasi</div>
-                            </div>
-                            <div class="metric">
-                                <div class="metric-value">4 jam</div>
-                                <div class="metric-label">Per Survey</div>
-                            </div>
-                        </div>
-
-                        <div id="details-2" class="project-details">
-                            <div class="detail-section">
-                                <h4>Workflow Process</h4>
-                                <div style="background: rgba(255,255,255,0.05); padding: 1rem; border-radius: 8px; margin: 1rem 0;">
-                                    <div style="display: flex; flex-direction: column; gap: 0.5rem;">
-                                        <div style="display: flex; align-items: center; gap: 0.5rem;">
-                                            <span style="background: var(--primary); color: white; width: 24px; height: 24px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: bold;">1</span>
-                                            <span>Total Station → Point Cloud Data (XYZ Coordinates)</span>
-                                        </div>
-                                        <div style="margin-left: 12px; width: 2px; height: 20px; background: var(--secondary);"></div>
-                                        <div style="display: flex; align-items: center; gap: 0.5rem;">
-                                            <span style="background: var(--primary); color: white; width: 24px; height: 24px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: bold;">2</span>
-                                            <span>AutoCAD Civil 3D → Create Boundary & Contour Lines</span>
-                                        </div>
-                                        <div style="margin-left: 12px; width: 2px; height: 20px; background: var(--secondary);"></div>
-                                        <div style="display: flex; align-items: center; gap: 0.5rem;">
-                                            <span style="background: var(--primary); color: white; width: 24px; height: 24px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: bold;">3</span>
-                                            <span>Excel Calculation → Average End Area Method</span>
-                                        </div>
-                                        <div style="margin-left: 12px; width: 2px; height: 20px; background: var(--secondary);"></div>
-                                        <div style="display: flex; align-items: center; gap: 0.5rem;">
-                                            <span style="background: var(--primary); color: white; width: 24px; height: 24px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: bold;">4</span>
-                                            <span>Output: Volume (m³) → Convert to Tons (Density Factor)</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="detail-section">
-                                <h4>Calculation Method</h4>
-                                <div class="code-block">
-<span class="code-comment">' Average End Area Method untuk Stock Pile</span>
-<span class="code-keyword">Input:</span>
-  Elv_Atas = <span class="code-number">18.402</span>  <span class="code-comment">'m</span>
-  Elv_Bawah = <span class="code-number">17.410</span> <span class="code-comment">'m</span>
-  Luas_Atas = <span class="code-number">0</span>      <span class="code-comment">'m² (tumpukan runcing)</span>
-  Luas_Bawah = <span class="code-number">35.8788</span> <span class="code-comment">'m²</span>
-
-<span class="code-comment">' Formula:</span>
-Beda_Tinggi = Elv_Atas - Elv_Bawah
-Luas_Rata2 = (Luas_Atas + Luas_Bawah) / <span class="code-number">2</span>
-Volume = Luas_Rata2 * Beda_Tinggi  <span class="code-comment">'= 26.38 m³</span>
-
-<span class="code-comment">' Konversi ke Ton:</span>
-Density_Factor = <span class="code-number">1.5</span>  <span class="code-comment">'ton/m³ untuk pasir</span>
-Berat = Volume * Density_Factor  <span class="code-comment">'= 39.57 ton</span>
-                                </div>
-                            </div>
-
-                            <div class="detail-section">
-                                <h4>Material Categories</h4>
-                                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; font-size: 0.85rem; color: var(--text-muted);">
-                                    <div>• Pasir Hitam (1.5 ton/m³)</div>
-                                    <div>• Pasir Silika (1.5 ton/m³)</div>
-                                    <div>• Batu Pecah 05-10 (1.37 ton/m³)</div>
-                                    <div>• Batu Pecah 10-20 (1.37 ton/m³)</div>
-                                    <div>• Batu Pecah 20-30 (1.38 ton/m³)</div>
-                                    <div>• Fly Ash (Density variabel)</div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <button class="expand-btn" onclick="event.stopPropagation(); toggleDetails(2)">
-                            Lihat Detail Teknis ↓
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Project 3: Reconciliation System -->
-                <div class="project-card" onclick="toggleDetails(3)">
-                    <div class="project-header">
-                        <div class="project-icon">📊</div>
-                        <h3>Multi-Branch Inventory Reconciliation</h3>
-                        <div class="project-tags">
-                            <span class="tag">Data Analysis</span>
-                            <span class="tag">ERP</span>
-                            <span class="tag">SOP</span>
-                        </div>
-                    </div>
-                    
-                    <div class="project-content">
-                        <p class="project-description">
-                            Sistem Berita Acara Stok Opname (BASO) terstandarisasi untuk 37 cabang dengan auto-calculation variance analysis, batasan loss threshold, dan approval workflow digital.
+                            Sistem Berita Acara Stok Opname terstandarisasi untuk 37 cabang dengan auto-calculation selisih fisik vs database vs in-transit. Tolerance control berbeda per kategori material.
                         </p>
                         
                         <div class="project-metrics">
@@ -1099,75 +911,245 @@ Berat = Volume * Density_Factor  <span class="code-comment">'= 39.57 ton</span>
                             </div>
                             <div class="metric">
                                 <div class="metric-value">2.5%</div>
-                                <div class="metric-label">Tolerance</div>
+                                <div class="metric-label">Tolerance Semen</div>
+                            </div>
+                        </div>
+
+                        <div id="details-1" class="project-details">
+                            <div class="detail-section">
+                                <h4>Struktur Kalkulasi</h4>
+                                <p style="color: var(--text-muted); font-size: 0.9rem;">
+                                    Template menghitung otomatis:
+                                    <br>• Selisih = Fisik - Database
+                                    <br>• Nilai Rupiah Selisih = Selisih × Harga Satuan
+                                    <br>• Prosentase Loss = Selisih / (Fisik + In Transit) × 100
+                                    <br>• Validasi tolerance per kategori material
+                                </p>
+                            </div>
+
+                            <div class="detail-section">
+                                <h4>Kategori Material & Tolerance</h4>
+                                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; font-size: 0.85rem; color: var(--text-muted);">
+                                    <div>• Fly Ash: 5%</div>
+                                    <div>• Semen Bulk: 2.5%</div>
+                                    <div>• Pasir: 5%</div>
+                                    <div>• Batu Pecah: 5%</div>
+                                    <div>• Solar: 2.5%</div>
+                                    <div>• Additive: 2.5%</div>
+                                </div>
+                            </div>
+
+                            <div class="detail-section">
+                                <h4>Formula Excel</h4>
+                                <div class="formula-box">
+                                    =IF(ABS(D/(B+E)*100)>VLOOKUP(Material,Tolerance_Table,2,FALSE),"ALERT","OK")
+                                </div>
+                                <p style="color: var(--text-muted); font-size: 0.8rem; margin-top: 0.5rem;">
+                                    Menggunakan INDEX-MATCH untuk lookup tolerance dan IF nested untuk flagging otomatis.
+                                </p>
+                            </div>
+                        </div>
+
+                        <button class="expand-btn" onclick="event.stopPropagation(); toggleDetails(1)">
+                            Lihat Detail Teknis ↓
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Project 2: Stockpile Volume -->
+                <div class="project-card" onclick="toggleDetails(2)">
+                    <div class="project-header">
+                        <div class="project-icon">🏔️</div>
+                        <h3>Stockpile Volume Calculator</h3>
+                        <div class="project-tags">
+                            <span class="tag">End Area Method</span>
+                            <span class="tag">Survey Data</span>
+                            <span class="tag">Density Conv</span>
+                        </div>
+                    </div>
+                    
+                    <div class="project-content">
+                        <p class="project-description">
+                            Perhitungan volume material curah (pasir, batu pecah) menggunakan metode Average End Area berdasarkan data elevasi dari Total Station. Konversi otomatis ke tonase dengan density spesifik.
+                        </p>
+                        
+                        <div class="project-metrics">
+                            <div class="metric">
+                                <div class="metric-value">±1.5%</div>
+                                <div class="metric-label">Akurasi</div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-value">4 Jenis</div>
+                                <div class="metric-label">Material</div>
+                            </div>
+                        </div>
+
+                        <div id="details-2" class="project-details">
+                            <div class="detail-section">
+                                <h4>Metode End Area</h4>
+                                <p style="color: var(--text-muted); font-size: 0.9rem;">
+                                    Menggunakan rumus prisma untuk stockpile yang terukur di lapangan dengan Total Station:
+                                </p>
+                                <div class="formula-box">
+                                    Volume = (Luas Atas + Luas Bawah)/2 × Beda Tinggi
+                                </div>
+                            </div>
+
+                            <div class="detail-section">
+                                <h4>Material & Density</h4>
+                                <ul style="color: var(--text-muted); font-size: 0.9rem; padding-left: 1.2rem;">
+                                    <li><strong>Pasir Lumajang:</strong> 1.59 - 1.63 ton/m³</li>
+                                    <li><strong>Batu Pecah 05-10:</strong> 1.40 - 1.47 ton/m³</li>
+                                    <li><strong>Batu Pecah 10-20:</strong> 1.43 - 1.66 ton/m³</li>
+                                    <li><strong>Batu Pecah 20-30:</strong> 1.43 ton/m³</li>
+                                </ul>
+                            </div>
+
+                            <div class="detail-section">
+                                <h4>Workflow</h4>
+                                <p style="color: var(--text-muted); font-size: 0.9rem;">
+                                    1. Survey Total Station → Koordinat XYZ boundary & top stockpile<br>
+                                    2. Input ke Excel → Auto-calculation luas & volume<br>
+                                    3. Konversi density → Tonase aktual<br>
+                                    4. Bandingkan dengan database → Variance analysis
+                                </p>
+                            </div>
+                        </div>
+
+                        <button class="expand-btn" onclick="event.stopPropagation(); toggleDetails(2)">
+                            Lihat Detail Teknis ↓
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Project 3: Tank Calculator -->
+                <div class="project-card" onclick="toggleDetails(3)">
+                    <div class="project-header">
+                        <div class="project-icon">⛽</div>
+                        <h3>Tank Volume Calculator</h3>
+                        <div class="project-tags">
+                            <span class="tag">Elliptical Tank</span>
+                            <span class="tag">Lookup Table</span>
+                            <span class="tag">Liquid Calc</span>
+                        </div>
+                    </div>
+                    
+                    <div class="project-content">
+                        <p class="project-description">
+                            Sistem perhitungan volume tangki solar horizontal berbentuk elips dan tangki additive bulat. Menggunakan tabel lookup untuk konversi kedalaman ke volume (hubungan non-linear).
+                        </p>
+                        
+                        <div class="project-metrics">
+                            <div class="metric">
+                                <div class="metric-value">3</div>
+                                <div class="metric-label">Tangki Solar</div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-value">±1%</div>
+                                <div class="metric-label">Error Rate</div>
                             </div>
                         </div>
 
                         <div id="details-3" class="project-details">
                             <div class="detail-section">
-                                <h4>System Architecture</h4>
-                                <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1rem;">
-                                    Template Excel terintegrasi dengan formula otomatis untuk menghitung selisih stok fisik vs database, dengan validasi batasan loss yang wajar sesuai kategori material.
+                                <h4>Tangki Horizontal (Elips)</h4>
+                                <p style="color: var(--text-muted); font-size: 0.9rem;">
+                                    Untuk tangki solar dengan dimensi:
+                                    <br>• Panjang: 182.5 cm
+                                    <br>• Lebar: 167 cm  
+                                    <br>• Tinggi: 105 cm
                                 </p>
-                            </div>
-
-                            <div class="detail-section">
-                                <h4>Key Formulas</h4>
-                                <div class="code-block">
-<span class="code-comment">' BERITA ACARA STOK OPNAME (BASO) System</span>
-
-<span class="code-keyword">Columns:</span>
-A: Kode_Barang
-B: Nama_Barang  
-C: Satuan
-D: Harga_Satuan
-E: Stok_Fisik
-F: Stok_Database
-G: Issued_Ticket (IT)
-H: Selisih = E - F
-I: Valuasi = H * D
-J: %Variance = H / (E + G) * 100
-
-<span class="code-comment">' Batasan Loss Thresholds:</span>
-Fly_Ash: <span class="code-number">5%</span> dari (Fisik + IT)
-Semen: <span class="code-number">2.5%</span> dari (Fisik + IT)
-Pasir/Batu: <span class="code-number">5%</span> dari (Fisik + IT)
-Solar: <span class="code-number">2.5%</span> dari (Fisik + IT)
-Additive: <span class="code-number">2.5%</span> dari (Fisik + IT)
-
-<span class="code-keyword">Status:</span>
-<span class="code-keyword">IF</span> ABS(%Variance) <= Threshold → <span class="code-string">"OK"</span>
-<span class="code-keyword">IF</span> %Variance > Threshold → <span class="code-string">"Surplus"</span>
-<span class="code-keyword">IF</span> %Variance < -Threshold → <span class="code-string">"Loss"</span>
+                                <div class="formula-box">
+                                    Volume = L × (π/4 × a × b) × Correction_Factor(Kedalaman)
                                 </div>
                             </div>
 
                             <div class="detail-section">
-                                <h4>Dashboard Features</h4>
-                                <div style="background: rgba(255,255,255,0.05); padding: 1rem; border-radius: 8px;">
-                                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; text-align: center;">
-                                        <div>
-                                            <div style="font-size: 1.5rem; color: var(--success);">98.2%</div>
-                                            <div style="font-size: 0.75rem; color: var(--text-muted);">Akurasi Rata-rata</div>
-                                        </div>
-                                        <div>
-                                            <div style="font-size: 1.5rem; color: var(--danger);">3</div>
-                                            <div style="font-size: 0.75rem; color: var(--text-muted);">Item Loss Alert</div>
-                                        </div>
-                                        <div>
-                                            <div style="font-size: 1.5rem; color: var(--accent);">156</div>
-                                            <div style="font-size: 0.75rem; color: var(--text-muted);">SKU Diopname</div>
-                                        </div>
-                                        <div>
-                                            <div style="font-size: 1.5rem; color: var(--primary);">2</div>
-                                            <div style="font-size: 0.75rem; color: var(--text-muted);">Surplus Identified</div>
-                                        </div>
-                                    </div>
+                                <h4>Tabel Konversi Non-Linear</h4>
+                                <p style="color: var(--text-muted); font-size: 0.9rem;">
+                                    Karena bentuk elips, 50% kedalaman ≠ 50% volume. Sistem menggunakan lookup table:
+                                </p>
+                                <div style="background: rgba(255,255,255,0.05); padding: 1rem; border-radius: 8px; font-size: 0.85rem; color: var(--text-muted);">
+                                    Kedalaman 50% = 50% Volume<br>
+                                    Kedalaman 25% = 19.5% Volume<br>
+                                    Kedalaman 75% = 80.5% Volume
+                                </div>
+                            </div>
+
+                            <div class="detail-section">
+                                <h4>Tangki Bulat (Additive)</h4>
+                                <p style="color: var(--text-muted); font-size: 0.9rem;">
+                                    Perhitungan segmen temberang (circular segment) untuk fluida yang tidak memenuhi diameter penuh:
+                                </p>
+                                <div class="formula-box">
+                                    V = L × (R² × arccos((R-h)/R) - (R-h) × √(2Rh-h²))
                                 </div>
                             </div>
                         </div>
 
                         <button class="expand-btn" onclick="event.stopPropagation(); toggleDetails(3)">
+                            Lihat Detail Teknis ↓
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Project 4: Silo Calculator -->
+                <div class="project-card" onclick="toggleDetails(4)">
+                    <div class="project-header">
+                        <div class="project-icon">🏭</div>
+                        <h3>Silo Volume Calculator</h3>
+                        <div class="project-tags">
+                            <span class="tag">Cylinder+Cone</span>
+                            <span class="tag">Semen & Fly Ash</span>
+                        </div>
+                    </div>
+                    
+                    <div class="project-content">
+                        <p class="project-description">
+                            Perhitungan volume silo semen dan fly ash dengan geometri kombinasi tabung (cylinder) dan kerucut (cone). Konversi ke ton dengan density 1.17 ton/m³ (semen) dan 1.0 ton/m³ (fly ash).
+                        </p>
+                        
+                        <div class="project-metrics">
+                            <div class="metric">
+                                <div class="metric-value">2</div>
+                                <div class="metric-label">Silo Semen</div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-value">1</div>
+                                <div class="metric-label">Silo Fly Ash</div>
+                            </div>
+                        </div>
+
+                        <div id="details-4" class="project-details">
+                            <div class="detail-section">
+                                <h4>Geometri Silo</h4>
+                                <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 0.5rem;">
+                                    <strong>Bagian Tabung:</strong>
+                                </p>
+                                <div class="formula-box">
+                                    V_tabung = π × r² × Tinggi_Semen
+                                </div>
+                                
+                                <p style="color: var(--text-muted); font-size: 0.9rem; margin: 1rem 0 0.5rem;">
+                                    <strong>Bagian Kerucut (Cone):</strong>
+                                </p>
+                                <div class="formula-box">
+                                    V_kerucut = 1/3 × π × r² × t_kerucut
+                                </div>
+                            </div>
+
+                            <div class="detail-section">
+                                <h4>Spesifikasi Silo</h4>
+                                <ul style="color: var(--text-muted); font-size: 0.9rem; padding-left: 1.2rem;">
+                                    <li><strong>Silo Utara & Selatan:</strong> Diameter 3.10m, Tinggi total 9m</li>
+                                    <li><strong>Silo Fly Ash:</strong> Diameter 3.10m, Tinggi kerucut 1.55m</li>
+                                    <li><strong>Konversi Semen:</strong> 1.17 ton/m³</li>
+                                    <li><strong>Konversi Fly Ash:</strong> 1.0 ton/m³</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <button class="expand-btn" onclick="event.stopPropagation(); toggleDetails(4)">
                             Lihat Detail Teknis ↓
                         </button>
                     </div>
@@ -1181,55 +1163,55 @@ Additive: <span class="code-number">2.5%</span> dari (Fisik + IT)
         <div class="container">
             <div class="section-header">
                 <h2>Keahlian Teknis</h2>
-                <p>Kombinasi keahlian teknis lapangan dan analisis data</p>
+                <p>Kombinasi keahlian inventory management dan perhitungan geometri untuk industri konstruksi</p>
             </div>
 
             <div class="skills-grid">
                 <div class="skill-category">
-                    <h3>📦 Inventory Management</h3>
+                    <h3>🏗️ Material Ready Mix</h3>
                     <ul class="skill-list">
-                        <li>Stock Opname & Audit</li>
-                        <li>Multi-Branch Coordination</li>
-                        <li>Transfer Approval System</li>
+                        <li>Bulk Material (Pasir, Batu Pecah)</li>
+                        <li>Liquid (Solar, Additive TAMCEM)</li>
+                        <li>Powder (Semen, Fly Ash)</li>
+                        <li>Spare Parts & Alat Tulis</li>
+                        <li>Quality Control (ASTM C 29)</li>
+                        <li>Bulk Density Testing</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <h3>📐 Perhitungan Volume</h3>
+                    <ul class="skill-list">
+                        <li>End Area Method (Stockpile)</li>
+                        <li>Geometri Elips (Tangki Solar)</li>
+                        <li>Tabung + Kerucut (Silo)</li>
+                        <li>Circular Segment (Tangki Bulat)</li>
+                        <li>Konversi Volume ke Tonase</li>
+                        <li>Density Material Spesifik</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <h3>💻 Excel & Data</h3>
+                    <ul class="skill-list">
+                        <li>Advanced Formulas (Nested IF)</li>
+                        <li>INDEX-MATCH & VLOOKUP</li>
+                        <li>Conditional Formatting</li>
+                        <li>PivotTables & Dashboard</li>
+                        <li>Template BASO Otomatis</li>
                         <li>Variance Analysis</li>
-                        <li>Loss Prevention</li>
-                        <li>Cycle Counting</li>
                     </ul>
                 </div>
 
                 <div class="skill-category">
-                    <h3>💻 Technical Skills</h3>
+                    <h3>📊 Inventory Control</h3>
                     <ul class="skill-list">
+                        <li>Stock Opname Multi-Cabang</li>
+                        <li>Tolerance Control System</li>
+                        <li>Transfer Approval</li>
+                        <li>In-Transit Tracking</li>
+                        <li>Loss Prevention Analysis</li>
                         <li>Sunfish ERP</li>
-                        <li>Advanced Excel (VBA/Pivot)</li>
-                        <li>Google Workspace Automation</li>
-                        <li>Database Management</li>
-                        <li>Remote Desktop Support</li>
-                        <li>Digital Workflow Design</li>
-                    </ul>
-                </div>
-
-                <div class="skill-category">
-                    <h3>📐 Survey & Measurement</h3>
-                    <ul class="skill-list">
-                        <li>Total Station Operation</li>
-                        <li>AutoCAD 2D/3D</li>
-                        <li>Volume Calculation</li>
-                        <li>Geometric Modeling</li>
-                        <li>Unit Conversion (m³ → Ton)</li>
-                        <li>Stock Pile Measurement</li>
-                    </ul>
-                </div>
-
-                <div class="skill-category">
-                    <h3>📊 Data Analysis</h3>
-                    <ul class="skill-list">
-                        <li>Excel Formula Development</li>
-                        <li>Tank/Silo Calculation</li>
-                        <li>Stock Reconciliation</li>
-                        <li>Trend Analysis</li>
-                        <li>Reporting Automation</li>
-                        <li>Dashboard Creation</li>
                     </ul>
                 </div>
             </div>
@@ -1242,8 +1224,7 @@ Additive: <span class="code-number">2.5%</span> dari (Fisik + IT)
             <div class="contact-content">
                 <h2>Tertarik Berkolaborasi?</h2>
                 <p style="color: var(--text-muted); margin: 1rem 0;">
-                    Saya terbuka untuk kesempatan di bidang Inventory Control, Warehouse Management, atau Logistik. 
-                    Mari diskusikan bagaimana saya bisa membantu optimalisasi sistem inventory Anda.
+                    Saya terbuka untuk kesempatan di bidang Inventory Control, Warehouse Management, atau Logistik di industri Ready Mix Concrete, Manufaktur, atau Konstruksi.
                 </p>
                 
                 <div class="availability-status">
@@ -1269,32 +1250,28 @@ Additive: <span class="code-number">2.5%</span> dari (Fisik + IT)
                         <div class="contact-value">Fauzi Hidayat</div>
                     </a>
 
-                   <a href="assets/cv-fauzi-hidayat.pdf" download class="contact-card">
-    <div class="contact-icon">📄</div>
-    <div class="contact-label">Download CV</div>
-    <div class="contact-value">PDF Format</div>
+                    <a href="assets/cv-fauzi-hidayat.pdf" download class="contact-card">
+                        <div class="contact-icon">📄</div>
+                        <div class="contact-label">Download CV</div>
+                        <div class="contact-value">PDF Format</div>
                     </a>
                 </div>
 
                 <div class="highlight-box">
-                    <h3>💡 Siap Membantu Tim Anda</h3>
+                    <h3>💡 Keunggulan Sistem Saya</h3>
                     <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.5rem;">
-                        Dengan pengalaman 7+ tahun mengelola inventory multi-cabang dan mengembangkan sistem otomasi, 
-                        saya siap berkontribusi untuk meningkatkan efisiensi dan akurasi sistem inventory perusahaan Anda.
+                        Sistem Excel yang saya bangun <strong>tidak memerlukan VBA/macro</strong>, sehingga aman digunakan di environment korporat dengan security policy ketat. Semua perhitungan menggunakan rumus matematika murni (geometri, lookup, dan logical functions) untuk hasil yang transparan dan audit-able.
                     </p>
                     <a href="https://wa.me/6281358633340" target="_blank" class="btn btn-whatsapp" style="width: 100%; justify-content: center; padding: 1rem;">
                         💬 Hubungi Saya via WhatsApp Sekarang
                     </a>
-                    <p style="margin-top: 1rem; font-size: 0.875rem; color: var(--text-muted);">
-                        ⚡ Respon cepat via WhatsApp
-                    </p>
                 </div>
             </div>
         </div>
     </section>
 
     <footer>
-        <p>© 2026 Fauzi Hidayat • Inventory Control Specialist</p>
+        <p>© 2026 Fauzi Hidayat • Inventory Control Specialist - Ready Mix Concrete</p>
         <p style="margin-top: 0.5rem; font-size: 0.875rem;">
             <a href="https://wa.me/6281358633340" target="_blank" style="color: var(--whatsapp); text-decoration: none;">WhatsApp</a> • 
             <a href="mailto:fauzi536@gmail.com" style="color: var(--primary); text-decoration: none;">Email</a> • 
@@ -1308,17 +1285,14 @@ Additive: <span class="code-number">2.5%</span> dari (Fisik + IT)
             const details = document.getElementById(`details-${id}`);
             const allDetails = document.querySelectorAll('.project-details');
             
-            // Close others
             allDetails.forEach((detail, index) => {
                 if (index + 1 !== id) {
                     detail.classList.remove('active');
                 }
             });
             
-            // Toggle current
             details.classList.toggle('active');
             
-            // Smooth scroll to card if opening
             if (details.classList.contains('active')) {
                 setTimeout(() => {
                     details.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
@@ -1351,31 +1325,6 @@ Additive: <span class="code-number">2.5%</span> dari (Fisik + IT)
                         block: 'start'
                     });
                 }
-            });
-        });
-
-        // Add fade-in animation on scroll
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('fade-in');
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('.project-card, .skill-category, .timeline-item').forEach(el => {
-            observer.observe(el);
-        });
-
-        // Track WhatsApp clicks (optional, for analytics)
-        document.querySelectorAll('a[href*="wa.me"]').forEach(link => {
-            link.addEventListener('click', () => {
-                console.log('WhatsApp clicked');
             });
         });
     </script>
